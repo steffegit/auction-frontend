@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 function TopBar() {
 
   const [showBox, setShowBox] = useState(false);
