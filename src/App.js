@@ -1,34 +1,20 @@
-import ItemCard from "./components/ItemCard";
-import TopBar from "./components/TopBar";
+import Home from './pages/Home'
+import Post from './pages/Post'
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css'
+import './styles.css'
 
-import "swiper/css";
-import "./styles.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="flex flex-col mx-auto overflow-hidden">
-      <TopBar />
-      {/* MOBILE ONLY FOR NOW */}
-      <div>
-        <div className="flex pt-10 pl-5 text-xl font-bold">
-          Swipe to view featured auctions...
-        </div>
-        <Swiper>
-          <SwiperSlide>
-            <ItemCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ItemCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ItemCard />
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/post" element={<Post />} />
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App

@@ -1,12 +1,15 @@
-import React, { useState, Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
+import React, { useState, Fragment } from 'react'
+import { Menu, Transition } from '@headlessui/react'
+import { useNavigate } from 'react-router-dom'
 
 function TopBar() {
-  const [showBox, setShowBox] = useState(false);
+  const [showBox, setShowBox] = useState(false)
 
   const toggleShowBox = () => {
-    setShowBox(!showBox);
-  };
+    setShowBox(!showBox)
+  }
+
+  let navigate = useNavigate()
 
   return (
     <div className="flex p-5 w-screen justify-between border border-gray-300 border-t-0">
@@ -48,6 +51,7 @@ function TopBar() {
         <button
           type="button"
           className="p-2 rounded-md hover:bg-gray-100 border border-slate-300"
+          onClick={() => navigate('/post')}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +150,7 @@ function TopBar() {
         </Menu>
       </div>
     </div>
-  );
+  )
 }
 
-export default TopBar;
+export default TopBar
