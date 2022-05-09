@@ -1,22 +1,15 @@
 import React from 'react'
 
-function ItemCard() {
+function ItemCard({ title, description, imgLink }) {
   return (
     <div className="flex flex-col p-5 m-5 h-max border border-gray-300 space-y-6 rounded-lg shadow-md">
       <div className="flex justify-center items-center pt-1">
-        <img
-          src="https://via.placeholder.com/400x300"
-          alt="car-pic"
-          className="rounded-sm"
-        />
+        <img src={imgLink} alt="car-pic" className="rounded-sm" />
       </div>
       {/* DESCRIPTION */}
       <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-          consequuntur autem magni quos placeat voluptatum accusamus aspernatur
-          sapiente dolorum impedit.
-        </p>
+        <h1 className="text-3xl font-semibold border-b mb-4">{title}</h1>
+        <p>{description}</p>
       </div>
       {/* BID BUTTON*/}
       <div>

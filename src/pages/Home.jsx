@@ -16,13 +16,37 @@ function Home() {
         </div>
         <Swiper>
           <SwiperSlide>
-            <ItemCard />
+            <ItemCard
+              title={'Volkswagen Golf'}
+              description={
+                'Audio-Navigationssystem Discover Pro (Touchscreen, CD/DVD, MP3, Festplattenspeicher, Bluetooth), Fahrassistenz-Paket, Fahrassistenz-System: Adaptive Fahrwerksregelung (DCC), Fahrassistenz-System: Verkehrszeichenerkennung, Insassen-Schutzsystem proaktiv, Mobiltelefon Schnittstelle Premium (inkl. Bluetooth-/Audio-Schnittstelle), Multimedia-Schnittstelle USB (iPhone / iPod) mit AUX-IN, Radioempfang digital (DAB+), Raucher-Paket, Rückfahrkamera, Sitzbezug / Polsterung: Stoff / Alcantara, Sonderlackierung Oryx-Weiß Perlmutt-Effekt, Sport & Sound-Paket, Top-Paket, Winterbereifung zusätzlich (Kundenangabe erforderlich), Zusatzheizung (Standheizung)'
+              }
+              imgLink={
+                'https://img.classistatic.de/api/v1/mo-prod/images/0b/0b0146c8-773e-4e6e-bde8-abddda4ca1dc?rule=mo-640.jpg'
+              }
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <ItemCard />
+            <ItemCard
+              title={'Volkswagen Golf'}
+              description={
+                'Audio-Navigationssystem Discover Pro (Touchscreen, CD/DVD, MP3, Festplattenspeicher, Bluetooth), Fahrassistenz-Paket, Fahrassistenz-System: Adaptive Fahrwerksregelung (DCC), Fahrassistenz-System: Verkehrszeichenerkennung, Insassen-Schutzsystem proaktiv, Mobiltelefon Schnittstelle Premium (inkl. Bluetooth-/Audio-Schnittstelle), Multimedia-Schnittstelle USB (iPhone / iPod) mit AUX-IN, Radioempfang digital (DAB+), Raucher-Paket, Rückfahrkamera, Sitzbezug / Polsterung: Stoff / Alcantara, Sonderlackierung Oryx-Weiß Perlmutt-Effekt, Sport & Sound-Paket, Top-Paket, Winterbereifung zusätzlich (Kundenangabe erforderlich), Zusatzheizung (Standheizung)'
+              }
+              imgLink={
+                'https://img.classistatic.de/api/v1/mo-prod/images/0b/0b0146c8-773e-4e6e-bde8-abddda4ca1dc?rule=mo-640.jpg'
+              }
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <ItemCard />
+            <ItemCard
+              title={'Volkswagen Golf'}
+              description={
+                'Audio-Navigationssystem Discover Pro (Touchscreen, CD/DVD, MP3, Festplattenspeicher, Bluetooth), Fahrassistenz-Paket, Fahrassistenz-System: Adaptive Fahrwerksregelung (DCC), Fahrassistenz-System: Verkehrszeichenerkennung, Insassen-Schutzsystem proaktiv, Mobiltelefon Schnittstelle Premium (inkl. Bluetooth-/Audio-Schnittstelle), Multimedia-Schnittstelle USB (iPhone / iPod) mit AUX-IN, Radioempfang digital (DAB+), Raucher-Paket, Rückfahrkamera, Sitzbezug / Polsterung: Stoff / Alcantara, Sonderlackierung Oryx-Weiß Perlmutt-Effekt, Sport & Sound-Paket, Top-Paket, Winterbereifung zusätzlich (Kundenangabe erforderlich), Zusatzheizung (Standheizung)'
+              }
+              imgLink={
+                'https://img.classistatic.de/api/v1/mo-prod/images/0b/0b0146c8-773e-4e6e-bde8-abddda4ca1dc?rule=mo-640.jpg'
+              }
+            />
           </SwiperSlide>
         </Swiper>
       </div>
