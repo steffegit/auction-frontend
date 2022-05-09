@@ -8,11 +8,11 @@ import "./styles.css";
 
 function App() {
   return (
-    <div className="flex flex-col mx-auto">
+    <div className="flex flex-col mx-auto overflow-hidden">
       <TopBar />
       {/* MOBILE ONLY FOR NOW */}
       <div>
-        <div className="flex pt-5 pl-5 text-xl font-bold">
+        <div className="flex pt-10 pl-5 text-xl font-bold">
           Swipe to view featured auctions...
         </div>
         <Swiper>
