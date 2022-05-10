@@ -7,7 +7,6 @@ function Ads() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, totam?
       </div>
       {/* IMAGES */}
-      {/* TODO: Make this responsive */}
       <div className="flex w-full h-full justify-between space-x-4 pb-5 px-2">
         <a href="#" className="w-1/2">
           <div>
@@ -15,10 +14,9 @@ function Ads() {
               src="https://images.ctfassets.net/rb55mbb1m3hk/7ozdx92cZWiAtxzhEd2rTx/4f64792ce4e9a709c2519dd6662ce8ee/Kijiji_Lifestyle_20_Meetup-to-exchange-goods_horizontal_closeup_fall__1_.jpeg"
               className="relative rounded-lg shadow-lg object-cover aspect-video"
             />
-            {/*TODO:  DO THIS DIV'S INSIDE THE IMAGE */}
             {/* Not proud of these fixed variables but it works for now... */}
             <div className="absolute -mt-7">
-              <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[7px]">
+              <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[8px]">
                 Lorem ipsum dolor.
               </span>
             </div>
@@ -31,7 +29,7 @@ function Ads() {
               className="rounded-lg shadow-lg object-cover aspect-video"
             />
             <div className="absolute -mt-7">
-              <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[7px]">
+              <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[8px]">
                 Ipsum lorem?
               </span>
             </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function ItemCard({ title, description, imgLink }) {
   return (
-    <div className="flex flex-col p-5 m-5 h-max border border-gray-300 space-y-6 rounded-lg shadow-md">
+    <div className="flex flex-col p-5 m-5 h-max w-[300px] border border-gray-300 space-y-6 rounded-lg shadow-md">
       <div className="flex justify-center items-center pt-1">
         <img src={imgLink} alt="car-pic" className="rounded-sm" />
       </div>
