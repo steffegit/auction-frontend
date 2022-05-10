@@ -6,7 +6,7 @@ function TopBar() {
   let navigate = useNavigate()
 
   return (
-    <div className="flex flex-col p-5 w-screen border border-gray-300 border-t-0 space-y-2">
+    <div className="flex flex-col p-5 w-screen border border-gray-300 border-t-0 space-y-4">
       <div className="flex justify-between items-center">
         <div className="text-3xl font-bold">
           <a href="/">AuctionaX</a>

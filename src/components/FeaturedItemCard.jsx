@@ -16,7 +16,7 @@ function ItemCard({ title, description, imgLink }) {
         {/* TODO:  CHANGE THE COLOR OF THE FOCUS COMPONENT */}
         <button
           type="button"
-          className="w-full p-4 rounded-md text-white bg-gradient-to-r from-blue-700 to-pink-400 sm:p-2 sm:w-max focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
+          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-blue-700 to-pink-400 sm:p-2 sm:w-max focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
         >
           Add to Cart
         </button>
