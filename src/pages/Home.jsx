@@ -3,6 +3,7 @@ import TopBar from '../components/TopBar'
 import Ads from '../components/Ads'
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
           Swipe to view featured auctions...
         </div>
 
-        <div className="flex flex-row overflow-x-scroll -space-x-4">
+        <div className="flex flex-row overflow-x-scroll scrollbar-hide -space-x-4">
           <div>
             <ItemCard
               title={'Volkswagen Golf'}
@@ -98,6 +99,7 @@ function Home() {
           </SwiperSlide>
         </Swiper> */}
       </div>
+      <Footer />
     </div>
   )
 }

@@ -3,23 +3,19 @@ import { Menu, Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
 
 function TopBar() {
-  const [showBox, setShowBox] = useState(false)
-
-  const toggleShowBox = () => {
-    setShowBox(!showBox)
-  }
-
   let navigate = useNavigate()
 
   return (
     <div className="flex flex-col p-5 w-screen border border-gray-300 border-t-0 space-y-2">
       <div className="flex justify-between items-center">
-        <div className="text-3xl font-bold">AuctionaX</div>
-        <div className="flex space-x-2">
+        <div className="text-3xl font-bold">
+          <a href="/">AuctionaX</a>
+        </div>
+        <div className="flex items-center space-x-2">
           {/* ADD ITEM */}
           <button
             type="button"
-            className="p-2 rounded-md hover:bg-gray-100 border border-slate-300"
+            className="flex p-2 rounded-md bg-sky-200 hover:bg-sky-400 border border-slate-300 space-x-2 transition-all"
             onClick={() => navigate('/post')}
           >
             <svg
@@ -36,6 +32,7 @@ function TopBar() {
                 d="M12 4v16m8-8H4"
               />
             </svg>
+            <div className="font-medium">List Item</div>
           </button>
           {/* USER ACC  */}
           <Menu as="div" className="relative inline-block text-left">
@@ -119,15 +116,15 @@ function TopBar() {
           </Menu>
         </div>
       </div>
+      {/* SEARCH INPUT */}
       <div>
         <label className="relative block">
-          {/* className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3" */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth={2}
+            strokeWidth={3}
             className="pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3"
           >
             <path
@@ -138,8 +135,8 @@ function TopBar() {
           </svg>
           <input
             type="text"
-            placeholder="Search..."
-            className="pl-12 w-full p-2 outline-none border border-slate-300 rounded-md focus:border-sky-500"
+            placeholder="Search anything from here"
+            className="pl-12 w-full p-2 outline-none border border-slate-300 rounded-md focus:border-sky-500 font-medium"
           />
         </label>
       </div>
