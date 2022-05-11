@@ -6,7 +6,7 @@ function Footer() {
       <div className="grid grid-cols-2 gap-8 py-8 px-6">
         <div>
           <h2 className="mb-6 font-semibold uppercase">AuctionaX</h2>
-          <ul className="text-gray-400">
+          <ul className="text-gray-400 text-sm sm:text-md">
             <li className="mb-4">
               <a href="#" className="hover:underline">
                 About
@@ -31,7 +31,7 @@ function Footer() {
         </div>
         <div>
           <h2 className="mb-6 font-semibold uppercase">Info</h2>
-          <ul className="text-gray-400">
+          <ul className="text-gray-400 text-sm sm:text-md">
             <li className="mb-4">
               <a href="#" className="hover:underline">
                 Terms of Use
@@ -55,8 +55,8 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col text-center justify-center py-6 px-4 bg-gray-700">
-        <div class="flex mb-4 justify-center space-x-4">
+      <div className="flex flex-col text-center justify-center items-center py-6 px-4 bg-gray-700">
+        <div class="flex mb-4 space-x-2 sm:space-x-4">
           <a href="#" class=" hover:bg-[#4267B2] rounded-full p-2">
             <svg
               class="w-8 h-8"

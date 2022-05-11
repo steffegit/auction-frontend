@@ -1,14 +1,27 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useState, useEffect } from 'react'
 import FeaturedItemCard from './FeaturedItemCard'
 
+const apiPath = 'https://auction-website89.herokuapp.com/main'
+
 function ContainerFeaturedItems() {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    axios
+      .get(apiPath)
+      .then((res) => res.data)
+      .then((data) => setData(data))
+      .then(console.log(data))
+  }, [])
+
   return (
     <div>
       <div className="flex pt-10 pl-5 text-xl font-bold">
         Swipe to view featured auctions...
       </div>
 
-      <div className="flex flex-row overflow-x-scroll scrollbar-hide -space-x-4">
+      <div className="flex flex-row overflow-x-scroll scrollbar-hide -space-x-2">
         <div>
           <FeaturedItemCard
             title={'Volkswagen Golf'}
