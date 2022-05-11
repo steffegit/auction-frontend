@@ -125,7 +125,7 @@ function Footer() {
           </a>
         </div>
         <span class="text-sm text-gray-300 font-semibold">
-          © 2022 <a href="/">AuctionaX™</a>. All Rights Reserved.
+          &copy; 2022 <a href="/">AuctionaX&trade;</a>. All Rights Reserved.
         </span>
       </div>
     </footer>
