@@ -5,7 +5,7 @@ import { Fragment } from 'react'
 
 function ContainerSoldItem() {
   return (
-    <div className="flex flex-col mt-2 p-5 space-y-4">
+    <div className="flex flex-col mt-2 p-5 space-y-8">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">Sold Items</h1>
         <Menu as="div">
