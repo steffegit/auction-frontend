@@ -39,7 +39,12 @@ function ContainerFeaturedItems() {
               <FeaturedItemCard
                 title={data[idx].title}
                 price={data[idx].price}
-                imgLink={data[idx].pic}
+                days={data[idx].days}
+                hours={data[idx].hours}
+                km={data[idx].km}
+                pic={data[idx].pic}
+                type={data[idx].type}
+                classic={data[idx].classic}
               />
             </div>
           ))}

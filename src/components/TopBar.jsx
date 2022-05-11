@@ -1,9 +1,34 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, Fragment, useEffect } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
+import SearchBar from './SearchBar'
+import axios from 'axios'
+
+const apiPath = 'https://auction-website89.herokuapp.com/main'
 
 function TopBar() {
   let navigate = useNavigate()
+
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(apiPath)
+      setData(res.data)
+      setError(null)
+    } catch (err) {
+      setError(err.message)
+      setData(null)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   return (
     <div className="flex flex-col p-5 w-screen border border-gray-300 border-t-0 space-y-4">
@@ -117,29 +142,7 @@ function TopBar() {
         </div>
       </div>
       {/* SEARCH INPUT */}
-      <div>
-        <label className="relative block">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={3}
-            className="pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <input
-            type="text"
-            placeholder="Search anything from here"
-            className="pl-12 w-full p-2 outline-none border border-slate-300 rounded-md focus:border-sky-500 font-medium"
-          />
-        </label>
-      </div>
+      <SearchBar items={data} loading={loading} />
     </div>
   )
 }
