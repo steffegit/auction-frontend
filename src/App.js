@@ -5,7 +5,6 @@ import 'swiper/css'
 import './styles.css'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import TopBar from './components/TopBar'
 
 function App() {
   return (

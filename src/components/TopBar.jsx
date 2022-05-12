@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useEffect } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
-import SearchBar from './SearchBar'
+import SearchBarV2 from './SearchBarV2'
 import axios from 'axios'
 
 const apiPath = 'https://auction-website89.herokuapp.com/main'
@@ -108,14 +108,22 @@ function TopBar() {
       </div>
       {/* SEARCH INPUT */}
       {showHambuger && (
-        <div className="flex flex-col bg-white justify-around items-end space-y-2 text-xl font-semibold">
-          <a href="#categories">Categories</a>
-          <a href="#deals">Deals</a>
-          <a href="/post">List Item</a>
-          <a href="#help">Help</a>
+        <div className="flex flex-col bg-white justify-around items-end space-y-2 text-xl font-semibold pb-2">
+          <a href="#categories" className="hover:underline">
+            Categories
+          </a>
+          <a href="#deals" className="hover:underline">
+            Deals
+          </a>
+          <a href="/post" className="hover:underline">
+            List Item
+          </a>
+          <a href="#help" className="hover:underline">
+            Help
+          </a>
         </div>
       )}
-      <SearchBar items={data} loading={loading} />
+      <SearchBarV2 items={data} loading={loading} />
     </div>
   )
 }
