@@ -8,7 +8,7 @@ function SearchBar({ items, loading }) {
   const handleFilter = (e) => {
     const searchWord = e.target.value
     const newFilter = items.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase())
+      return value.brand.toLowerCase().startsWith(searchWord)
     })
 
     if (searchWord === '') {
@@ -43,7 +43,7 @@ function SearchBar({ items, loading }) {
           onFocus={() => setShow(true)}
           onBlur={() => setShow(false)}
         />
-        {!loading && show && filteredData.length != 0 && (
+        {!loading && show && filteredData.length !== 0 && (
           <div className="absolute w-full mt-2 p-2 flex flex-col z-20 bg-white border border-slate-300 shadow-md rounded-md">
             {filteredData.slice(0, 4).map((item) => (
               <div
@@ -53,6 +53,7 @@ function SearchBar({ items, loading }) {
                 <img
                   src={item.pic}
                   className="w-10 h-10 object-cover rounded-full"
+                  alt="thumbnail"
                 />
                 <a href="/" className="text-sm pl-1">
                   {item.title}
