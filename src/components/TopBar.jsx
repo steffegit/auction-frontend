@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useEffect } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
-import SearchBarV2 from './SearchBarV2'
+import SearchBar from './SearchBar'
 import axios from 'axios'
 
 const apiPath = 'https://auction-website89.herokuapp.com/main'
@@ -106,8 +106,16 @@ function TopBar() {
           </div>
         </div>
       </div>
-      {/* SEARCH INPUT */}
-      {showHambuger && (
+      <Transition
+        as={Fragment}
+        show={showHambuger}
+        enter="transition ease-out duration-200"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
         <div className="flex flex-col bg-white justify-around items-end space-y-2 text-xl font-semibold pb-2">
           <a href="#categories" className="hover:underline">
             Categories
@@ -122,8 +130,8 @@ function TopBar() {
             Help
           </a>
         </div>
-      )}
-      <SearchBarV2 items={data} loading={loading} />
+      </Transition>
+      <SearchBar items={data} loading={loading} />
     </div>
   )
 }

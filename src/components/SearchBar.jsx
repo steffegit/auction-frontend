@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 
 function SearchBar({ items, loading }) {
   const [filteredData, setFilteredData] = useState([])
+  const [wordEntered, setWordEntered] = useState('')
 
   const [show, setShow] = useState(false)
 
   const handleFilter = (e) => {
     const searchWord = e.target.value
+    setWordEntered(searchWord)
     const newFilter = items.filter((value) => {
-      return value.brand.toLowerCase().startsWith(searchWord)
+      return value.brand.toLowerCase().startsWith(searchWord.toLowerCase())
     })
 
     if (searchWord === '') {
@@ -18,33 +20,58 @@ function SearchBar({ items, loading }) {
     }
   }
 
+  const clearInput = () => {
+    setFilteredData([])
+    setWordEntered('')
+  }
+
   return (
     <div>
-      <label className="relative block">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={3}
-          className="pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
+      <div className="relative flex items-center border border-slate-300 rounded-md focus:border-sky-500 font-medium">
         <input
           type="text"
           placeholder="Search anything from here"
-          className="pl-12 w-full p-2 outline-none border border-slate-300 rounded-md focus:border-sky-500 font-medium"
+          className="w-full p-2 outline-none rounded-md "
           onChange={handleFilter}
           onFocus={() => setShow(true)}
           onBlur={() => setShow(false)}
         />
+        <div className="p-2">
+          {wordEntered === '' ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 cursor-pointer"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              onClick={clearInput}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          )}
+        </div>
         {!loading && show && filteredData.length !== 0 && (
-          <div className="absolute w-full mt-2 p-2 flex flex-col z-20 bg-white border border-slate-300 shadow-md rounded-md">
+          <div className="absolute w-full top-10 mt-2 p-2 flex flex-col z-20 bg-white border border-slate-300 shadow-md rounded-md">
             {filteredData.slice(0, 4).map((item) => (
               <div
                 className="hover:bg-gray-100 text-black group flex w-full items-center rounded-md px-2 py-2 text-sm space-x-2"
@@ -62,7 +89,7 @@ function SearchBar({ items, loading }) {
             ))}
           </div>
         )}
-      </label>
+      </div>
     </div>
   )
 }
