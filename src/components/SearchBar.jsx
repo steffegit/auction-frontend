@@ -32,6 +32,7 @@ function SearchBar({ items, loading }) {
           type="text"
           placeholder="Search anything from here"
           className="w-full p-2 outline-none rounded-md "
+          value={wordEntered}
           onChange={handleFilter}
           onFocus={() => setShow(true)}
           onBlur={() => setShow(false)}
