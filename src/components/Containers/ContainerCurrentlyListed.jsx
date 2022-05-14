@@ -28,7 +28,10 @@ function ContainerCurrentlyListed() {
 
   return (
     <div>
-      <div className="flex flex-col p-5">
+      <div className="flex flex-col p-5 pb-0">
+        <div className="font-bold text-center text-3xl sm:text-5xl mb-5 sm:mb-10">
+          Currently Listed
+        </div>
         {data &&
           data.slice(0, 5)?.map((_, idx) => (
             <div key={data[idx].id}>
@@ -44,6 +47,14 @@ function ContainerCurrentlyListed() {
               />
             </div>
           ))}
+        <div className="w-full mt-5">
+          <button
+            type="button"
+            className="w-full p-2 text-center ring-2 rounded-md font-medium text-xl shadow-sm"
+          >
+            See all listed items
+          </button>
+        </div>
       </div>
     </div>
   )
