@@ -2,7 +2,7 @@ import React from 'react'
 
 function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
   return (
-    <div className="flex flex-col p-5 m-2 h-max w-[250px] border border-gray-300 space-y-6 rounded-lg shadow-md">
+    <div className="flex flex-col p-5 m-2 h-max w-[275px] border border-gray-300 space-y-6 rounded-lg shadow-md">
       <div className="flex justify-center items-center pt-1 -mb-2">
         <img
           src={pic}

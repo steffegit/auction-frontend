@@ -11,7 +11,7 @@ function CurrentlyListedCard({
   pic,
 }) {
   return (
-    <div className="flex p-2 border border-gray-300 mb-2 rounded-md justify-between">
+    <div className="flex py-2 px-1 border border-gray-300 mb-2 rounded-md justify-between">
       <div className="flex space-x-2">
         <div>
           <img src={pic} className="w-12 h-10 rounded-md object-cover" />
@@ -20,10 +20,12 @@ function CurrentlyListedCard({
           <div className="w-max font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
             {title}
           </div>
-          <div className="text-xs">Listed at 0:00 AM, 20 Feb 2022</div>
+          <div className="text-xs">
+            Listed <strong>Today</strong> at 0:00
+          </div>
         </div>
       </div>
-      <div className="flex w-20 justify-center items-center p-2 bg-sky-700 text-white rounded-md shadow-md scale-90">
+      <div className="flex w-20 h-10 justify-center items-center bg-sky-700 text-white rounded-full shadow-md scale-90">
         {price}
       </div>
     </div>

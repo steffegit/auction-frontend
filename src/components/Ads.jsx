@@ -2,13 +2,13 @@ import React from 'react'
 
 function Ads() {
   return (
-    <div className="flex flex-col bg-indigo-700 space-y-1">
+    <div className="flex flex-col bg-indigo-700 space-y-1 sm:rounded-md sm:mx-6 sm:px-4">
       <div className="flex font-bold p-5 pt-7 text-xl text-white justify-center text-center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, totam?
       </div>
       {/* IMAGES */}
       <div className="flex w-full h-full justify-between space-x-4 pb-5 px-2">
-        <a href="#" className="w-1/2">
+        <a href="#ad1" className="w-1/2">
           <div className="overflow-y-hidden">
             <img
               src="https://images.ctfassets.net/rb55mbb1m3hk/7ozdx92cZWiAtxzhEd2rTx/4f64792ce4e9a709c2519dd6662ce8ee/Kijiji_Lifestyle_20_Meetup-to-exchange-goods_horizontal_closeup_fall__1_.jpeg"
@@ -22,7 +22,7 @@ function Ads() {
             </div>
           </div>
         </a>
-        <a href="#" className="w-1/2">
+        <a href="#ad2" className="w-1/2">
           <div>
             <img
               src="https://images.ctfassets.net/rb55mbb1m3hk/7oMqQW63on7QFtmwRucu8q/c8d4af42bb85a0fb6db684c16b71d3da/top_5_home_improvements.jpeg"
