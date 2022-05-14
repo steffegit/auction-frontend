@@ -1,5 +1,5 @@
 import React from 'react'
-import SoldItem from '../SoldItem'
+import SoldItemCard from '../Cards/SoldItemCard'
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 
@@ -61,10 +61,10 @@ function ContainerSoldItem() {
         </Menu>
       </div>
       <div className="grid grid-cols-2 gap-4">
-        <SoldItem />
-        <SoldItem />
-        <SoldItem />
-        <SoldItem />
+        <SoldItemCard />
+        <SoldItemCard />
+        <SoldItemCard />
+        <SoldItemCard />
       </div>
     </div>
   )
