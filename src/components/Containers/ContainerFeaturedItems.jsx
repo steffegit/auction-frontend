@@ -28,7 +28,7 @@ function ContainerFeaturedItems() {
 
   return (
     <div>
-      <div className="flex items-end justify-between pt-10 px-5 text-xl sm:text-5xl font-bold mb-2 sm:mb-6">
+      <div className="flex items-end justify-between pt-10 px-5 text-3xl sm:text-5xl font-bold mb-2 sm:mb-6">
         <div>Featured Auctions</div>
         <a className="text-lg sm:text-lg hover:underline">See all</a>
       </div>
