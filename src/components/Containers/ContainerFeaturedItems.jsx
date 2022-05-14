@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import FeaturedItemCard from './FeaturedItemCard'
+import FeaturedItemCard from '../FeaturedItemCard'
 
 const apiPath = 'https://auction-website89.herokuapp.com/main'
 

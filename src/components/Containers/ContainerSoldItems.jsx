@@ -1,5 +1,5 @@
 import React from 'react'
-import SoldItem from './SoldItem'
+import SoldItem from '../SoldItem'
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 
