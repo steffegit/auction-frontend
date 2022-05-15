@@ -15,7 +15,7 @@ function Ads() {
               className="relative rounded-lg shadow-lg object-cover aspect-video"
             />
             {/*TODO: Not proud of these fixed variables but it works for now... */}
-            <div className="absolute -mt-7">
+            <div className="absolute -mt-[30px]">
               <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[8px]">
                 Lorem ipsum dolor.
               </span>
@@ -28,7 +28,7 @@ function Ads() {
               src="https://images.ctfassets.net/rb55mbb1m3hk/7oMqQW63on7QFtmwRucu8q/c8d4af42bb85a0fb6db684c16b71d3da/top_5_home_improvements.jpeg"
               className="rounded-lg shadow-lg object-cover aspect-video"
             />
-            <div className="absolute -mt-7">
+            <div className="absolute -mt-[30px]">
               <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[8px]">
                 Ipsum lorem?
               </span>

@@ -25,9 +25,12 @@ function CurrentlyListedCard({
           </div>
         </div>
       </div>
-      <div className="flex w-20 h-10 justify-center items-center bg-sky-700 text-white rounded-full shadow-md scale-90">
-        <a href="#view">View</a>
-      </div>
+      <a
+        href="#view"
+        className="flex w-20 h-10 justify-center items-center bg-sky-700 text-white rounded-full shadow-md scale-90 hover:w-[6rem] transition-all"
+      >
+        View
+      </a>
     </div>
   )
 }
