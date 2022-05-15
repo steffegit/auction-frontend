@@ -21,12 +21,12 @@ function CurrentlyListedCard({
             {title}
           </div>
           <div className="text-xs">
-            Listed <strong>Today</strong> at 0:00
+            Listed for <strong>{price}</strong>
           </div>
         </div>
       </div>
       <div className="flex w-20 h-10 justify-center items-center bg-sky-700 text-white rounded-full shadow-md scale-90">
-        {price}
+        <a href="#view">View</a>
       </div>
     </div>
   )

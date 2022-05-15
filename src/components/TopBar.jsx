@@ -57,7 +57,7 @@ function TopBar() {
           <div>
             <button
               type="button"
-              className="p-2 rounded-md hover:bg-gray-200"
+              className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-200"
               onClick={() => navigate('/login')}
             >
               <svg
@@ -74,6 +74,7 @@ function TopBar() {
                   d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                 />
               </svg>
+              <div className="hidden sm:block text-xl">Log In</div>
             </button>
           </div>
           {/* HAMBURGER */}

@@ -29,7 +29,7 @@ function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
         {/* TODO:  CHANGE THE COLOR OF THE FOCUS COMPONENT */}
         <button
           type="button"
-          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-blue-700 to-pink-400 sm:p-2 sm:w-max focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
+          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-blue-700 to-pink-400 sm:py-2 sm:px-6 sm:w-max focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
         >
           Place a bid
         </button>
