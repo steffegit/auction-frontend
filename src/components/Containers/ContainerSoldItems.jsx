@@ -9,8 +9,6 @@ function ContainerSoldItem() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  const [showHambuger, setShowHambuger] = useState(false)
-
   const fetchData = async () => {
     try {
       const res = await axios.get(apiPath)
