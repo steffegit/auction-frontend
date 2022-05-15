@@ -39,6 +39,20 @@ function TopBar() {
           <a href="/">AuctionaX</a>
         </div>
         <div className="flex items-center space-x-2">
+          <div className="hidden sm:flex space-x-8 bg-white justify-around items-end space-y-2 text-xl font-semibold pb-2 mr-4">
+            <a href="#categories" className="hover:underline">
+              Categories
+            </a>
+            <a href="#deals" className="hover:underline">
+              Deals
+            </a>
+            <a href="/post" className="hover:underline">
+              List Item
+            </a>
+            <a href="#help" className="hover:underline">
+              Help
+            </a>
+          </div>
           {/* USER ACC  */}
           <div>
             <button
@@ -63,7 +77,7 @@ function TopBar() {
             </button>
           </div>
           {/* HAMBURGER */}
-          <div className="flex items-center">
+          <div className="flex items-center sm:hidden">
             {!showHambuger ? (
               <button
                 type="button"
