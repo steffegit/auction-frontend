@@ -20,16 +20,27 @@ function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
             {price}
           </span>
         </div>
-        <p className="text-sm">
-          {days} days and {hours} hours left on this bid
-        </p>
+        <div className="flex justify-between items-center mt-6 w-full text-sm">
+          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black rounded-sm">
+            <div className=" font-mono text-3xl">{days}</div>
+            <p className="italic">days</p>
+          </div>
+          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black rounded-sm">
+            <div className=" font-mono text-3xl">{hours}</div>
+            <p className="italic">hours</p>
+          </div>
+          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black rounded-sm">
+            <div className=" font-mono text-3xl">0</div>
+            <p className="italic">mins</p>
+          </div>
+        </div>
       </div>
       {/* BID BUTTON*/}
       <div>
         {/* TODO:  CHANGE THE COLOR OF THE FOCUS COMPONENT */}
         <button
           type="button"
-          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-blue-700 to-pink-400 sm:py-2 sm:px-6 sm:w-max focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
+          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-blue-700 to-pink-400 sm:py-2 sm:px-6 focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
         >
           Place a bid
         </button>
