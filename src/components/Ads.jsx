@@ -4,20 +4,20 @@ function Ads() {
   return (
     <div className="flex flex-col bg-indigo-700 space-y-1 sm:rounded-md sm:mx-6 sm:px-4">
       <div className="flex font-bold p-5 pt-7 text-xl text-white justify-center text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, totam?
+        Need some advice on what to bid? Need more info about your next shiny
+        car? Talk to our representatives by using our SupportPlus Service!
       </div>
       {/* IMAGES */}
       <div className="flex w-full h-full justify-between space-x-4 pb-5 px-2">
         <a href="#ad1" className="w-1/2">
           <div className="overflow-y-hidden">
             <img
-              src="https://images.ctfassets.net/rb55mbb1m3hk/7ozdx92cZWiAtxzhEd2rTx/4f64792ce4e9a709c2519dd6662ce8ee/Kijiji_Lifestyle_20_Meetup-to-exchange-goods_horizontal_closeup_fall__1_.jpeg"
+              src="https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/wheels/wp-content/uploads/2020/10/Think-Like-A-Dealer-featured1.jpg"
               className="relative rounded-lg shadow-lg object-cover aspect-video"
             />
-            {/*TODO: Not proud of these fixed variables but it works for now... */}
-            <div className="absolute -mt-[30px]">
+            <div className="absolute -mt-[26px] sm:-mt-[30px] origin-left scale-90 sm:scale-100">
               <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[8px]">
-                Lorem ipsum dolor.
+                For all kinds of people.
               </span>
             </div>
           </div>
@@ -25,12 +25,12 @@ function Ads() {
         <a href="#ad2" className="w-1/2">
           <div>
             <img
-              src="https://images.ctfassets.net/rb55mbb1m3hk/7oMqQW63on7QFtmwRucu8q/c8d4af42bb85a0fb6db684c16b71d3da/top_5_home_improvements.jpeg"
+              src="https://thumbs.dreamstime.com/b/car-dealer-offering-car-to-family-smiling-61276461.jpg"
               className="rounded-lg shadow-lg object-cover aspect-video"
             />
-            <div className="absolute -mt-[30px]">
+            <div className="absolute -mt-[26px] sm:-mt-[30px] origin-left scale-90 sm:scale-100">
               <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[8px]">
-                Ipsum lorem?
+                Even for families.
               </span>
             </div>
           </div>

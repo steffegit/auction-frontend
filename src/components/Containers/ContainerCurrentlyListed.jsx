@@ -28,7 +28,7 @@ function ContainerCurrentlyListed() {
 
   return (
     <div>
-      <div className="flex flex-col p-5 pb-0">
+      <div className="flex flex-col p-5 pb-0 mt-10">
         <div className="font-bold text-center text-3xl sm:text-5xl mb-5 sm:mb-10">
           Currently Listed
         </div>
@@ -50,7 +50,7 @@ function ContainerCurrentlyListed() {
         <div className="w-full mt-5">
           <button
             type="button"
-            className="w-full p-2 text-center ring-2 rounded-md font-medium text-xl shadow-sm"
+            className="w-full p-2 text-center ring-2 rounded-md font-medium text-xl shadow-sm hover:bg-sky-500 transition-all focus:ring-4"
           >
             See all listed items
           </button>

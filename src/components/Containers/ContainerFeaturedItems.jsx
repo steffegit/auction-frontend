@@ -33,7 +33,7 @@ function ContainerFeaturedItems() {
         <a className="text-lg sm:text-lg hover:underline">See all</a>
       </div>
 
-      <div className="flex flex-row overflow-x-scroll scrollbar-hide -space-x-2">
+      <div className="flex flex-row overflow-x-scroll scrollbar-show -space-x-2">
         {data &&
           data?.map((_, idx) => (
             <div key={data[idx].id}>
