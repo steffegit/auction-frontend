@@ -2,7 +2,7 @@ import React from 'react'
 
 function SoldItem({ title, price, days, hours, km, type, classic, pic }) {
   return (
-    <div className="flex flex-col border border-gray-300 rounded-lg shadow-md p-5 space-y-2">
+    <div className="flex flex-col border border-gray-300 rounded-lg shadow-md p-5 space-y-4">
       <div className="flex justify-center items-center pt-1">
         <div className="relative">
           <img

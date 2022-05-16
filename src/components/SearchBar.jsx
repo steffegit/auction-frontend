@@ -31,7 +31,7 @@ function SearchBar({ items, loading }) {
         <input
           type="text"
           placeholder="Search anything from here"
-          className="w-full p-2 outline-none rounded-md "
+          className="w-full p-2 outline-none rounded-md bg-transparent "
           value={wordEntered}
           onChange={handleFilter}
           onFocus={() => setShow(true)}

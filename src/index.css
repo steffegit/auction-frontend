@@ -7,3 +7,11 @@
   -webkit-box-sizing: border-box; 
    box-sizing: border-box; 
 }
+
+#root {
+  --bg-color: #FEFEFE;
+  --primary: #3B2D60;
+  --secondary: #E78DD2;
+  --text-color: #DDE6FF;
+  --dark-color: #DFB59C;
+}

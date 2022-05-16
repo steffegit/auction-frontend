@@ -8,7 +8,7 @@ import ContainerCurrentlyListed from '../components/Containers/ContainerCurrentl
 
 function Home() {
   return (
-    <div className="flex flex-col max-w-5xl mx-auto scroll-smooth">
+    <div className="flex flex-col max-w-5xl mx-auto scroll-smooth bg-bgColor">
       <TopBar />
       <Ads />
       {/* MOBILE ONLY FOR NOW */}

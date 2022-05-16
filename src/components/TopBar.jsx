@@ -39,7 +39,7 @@ function TopBar() {
           <a href="/">AuctionaX</a>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="hidden sm:flex space-x-8 bg-white justify-around items-end space-y-2 text-xl font-semibold pb-2 mr-4">
+          <div className="hidden sm:flex space-x-8 justify-around items-end space-y-2 text-xl font-semibold pb-2 mr-4">
             <a href="#categories" className="hover:underline">
               Categories
             </a>
