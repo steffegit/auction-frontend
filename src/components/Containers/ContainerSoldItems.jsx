@@ -1,31 +1,7 @@
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import SoldItemCard from '../Cards/SoldItemCard'
 
-const apiPath = 'https://auction-website89.herokuapp.com/main'
-
-function ContainerSoldItem() {
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  const fetchData = async () => {
-    try {
-      const res = await axios.get(apiPath)
-      setData(res.data)
-      setError(null)
-    } catch (err) {
-      setError(err.message)
-      setData(null)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
+function ContainerSoldItem({ data }) {
   return (
     <div className="flex flex-col mt-2 p-5 space-y-8">
       <div className="flex items-center justify-end">

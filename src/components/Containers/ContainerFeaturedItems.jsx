@@ -1,31 +1,7 @@
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import FeaturedItemCard from '../Cards/FeaturedItemCard'
 
-const apiPath = 'https://auction-website89.herokuapp.com/main'
-
-function ContainerFeaturedItems() {
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  const fetchData = async () => {
-    try {
-      const res = await axios.get(apiPath)
-      setData(res.data)
-      setError(null)
-    } catch (err) {
-      setError(err.message)
-      setData(null)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
+function ContainerFeaturedItems({ data }) {
   return (
     <div>
       <div className="flex items-end justify-between pt-10 px-5 text-3xl sm:text-5xl font-bold mb-2 sm:mb-6">
