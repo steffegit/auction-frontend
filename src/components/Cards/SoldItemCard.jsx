@@ -16,7 +16,7 @@ function SoldItem({ title, price, days, hours, km, type, classic, pic }) {
         </div>
       </div>
       <div>
-        <h1 className="sm:text-2xl font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
+        <h1 className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
           {title}
         </h1>
         <p className="text-sm font-light">

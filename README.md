@@ -1,7 +1,6 @@
 # TODO:
 
 - Choose a color scheme
-- Make the `CurrentlyListedCard.jsx` text bigger and bigger padding on desktop.
 - Later, change all Lorem Ipsum text to something relevant
 
 <br>
@@ -15,3 +14,4 @@
 - Change the `Ads.jsx` pictures and text.
 - Show featured auction container with a scrollbar on desktop devices (did this for all devices)
 - Change the `FeaturedItemCard.jsx` description to a countdown (daisyUI). -> Couldn't implement daisyUI as it would brick everything that I already have. I just set it up for a API-based countdown (if possible)
+- Make the `CurrentlyListedCard.jsx` text bigger and bigger padding on desktop.
