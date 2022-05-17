@@ -1,8 +1,11 @@
 import React from 'react'
 import FeaturedItemCard from '../Cards/FeaturedItemCard'
 
-import { Autoplay, FreeMode, Mousewheel } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
+const scrollContainer = document.querySelector('#scrollContainer')
+scrollContainer.addEventListener('wheel', (e) => {
+  e.preventDefault()
+  scrollContainer.scrollLeft += e.deltaY
+})
 
 function ContainerFeaturedItems({ data }) {
   return (
@@ -12,21 +15,13 @@ function ContainerFeaturedItems({ data }) {
         <a className="text-lg sm:text-lg hover:underline">See all</a>
       </div>
 
-      <Swiper
-        direction={'horizontal'}
-        slidesPerView={4}
-        spaceBetween={140}
-        mousewheel={true}
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: true,
-        }}
-        modules={[Autoplay, FreeMode, Mousewheel]}
+      <div
+        id="scrollContainer"
+        className="flex flex-row overflow-x-scroll scrollbar-show -space-x-2"
       >
         {data &&
           data?.map((_, idx) => (
-            <SwiperSlide key={data[idx].id}>
+            <div key={data[idx].id}>
               <FeaturedItemCard
                 title={data[idx].title}
                 price={data[idx].price}
@@ -37,9 +32,9 @@ function ContainerFeaturedItems({ data }) {
                 type={data[idx].type}
                 classic={data[idx].classic}
               />
-            </SwiperSlide>
+            </div>
           ))}
-      </Swiper>
+      </div>
     </div>
   )
 }
