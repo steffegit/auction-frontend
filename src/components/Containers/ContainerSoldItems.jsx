@@ -3,7 +3,7 @@ import SoldItemCard from '../Cards/SoldItemCard'
 
 function ContainerSoldItem({ data }) {
   return (
-    <div className="flex flex-col mt-2 p-5 space-y-8">
+    <div className="flex flex-col mt-2 p-5 space-y-8 ">
       <div className="flex items-center justify-end">
         <h1 className="text-3xl sm:text-5xl font-bold">Sold Items</h1>
       </div>
