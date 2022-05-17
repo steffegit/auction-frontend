@@ -1,5 +1,7 @@
 import React from 'react'
 
+/* eslint-disable */
+
 function Footer() {
   return (
     <footer className="bg-gray-800 text-white mt-10 rounded-lg">
