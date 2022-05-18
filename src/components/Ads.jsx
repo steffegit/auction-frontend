@@ -2,7 +2,7 @@ import React from 'react'
 
 function Ads() {
   return (
-    <div className="flex flex-col bg-indigo-700 space-y-1 sm:rounded-md sm:mx-6 sm:px-4">
+    <div className="flex flex-col bg-indigo-700 space-y-1 sm:rounded-md sm:mx-4 sm:px-4">
       <div className="flex font-bold p-5 pt-7 text-xl text-white justify-center text-center">
         Need some advice on what to bid? Need more info about your next shiny
         car? Talk to our representatives by using our SupportPlus Service!
@@ -16,7 +16,7 @@ function Ads() {
               className="relative rounded-lg shadow-lg object-cover aspect-video"
             />
             <div className="absolute -mt-[26px] sm:-mt-[30px] origin-left scale-90 sm:scale-100">
-              <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[8px]">
+              <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg rounded-tr-2xl p-[8px]">
                 For all kinds of people.
               </span>
             </div>
@@ -29,7 +29,7 @@ function Ads() {
               className="rounded-lg shadow-lg object-cover aspect-video"
             />
             <div className="absolute -mt-[26px] sm:-mt-[30px] origin-left scale-90 sm:scale-100">
-              <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg p-[8px]">
+              <span className="text-sm text-white bg-zinc-600 bg-opacity-80 rounded-bl-lg rounded-tr-2xl p-[8px]">
                 Even for families.
               </span>
             </div>

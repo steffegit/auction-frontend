@@ -4,7 +4,7 @@ import CurrentlyListedCard from '../Cards/CurrentlyListedCard'
 function ContainerCurrentlyListed({ data }) {
   return (
     <div>
-      <div className="flex flex-col p-5 pb-0 mt-10 space-y-1">
+      <div className="flex flex-col p-3 py-5 pb-0 mt-10 space-y-1">
         <div className="font-bold text-center text-3xl sm:text-5xl mb-5 sm:mb-10">
           Currently Listed
         </div>

@@ -11,7 +11,7 @@ function CurrentlyListedCard({
   pic,
 }) {
   return (
-    <div className="flex py-2 px-1 sm:p-4 border border-gray-300 mb-2 rounded-md justify-between">
+    <div className="flex py-2 px-1 sm:p-3 border border-gray-300 mb-2 rounded-md justify-between">
       <div className="flex space-x-2">
         <div>
           <img

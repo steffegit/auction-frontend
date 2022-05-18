@@ -33,13 +33,13 @@ function TopBar() {
   }, [])
 
   return (
-    <div className="flex flex-col p-5 w-full space-y-4">
+    <div className="flex flex-col p-3 py-5 w-full space-y-4">
       <div className="flex justify-between items-center">
         <div className="text-xl sm:text-3xl font-bold">
           <a href="/">AuctionaX</a>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="hidden sm:flex space-x-8 justify-around items-end space-y-2 text-xl font-semibold pb-2 mr-4">
+          <div className="hidden sm:flex space-x-8 justify-around items-end space-y-2 text-xl pb-2 mr-4">
             <a href="#categories" className="hover:underline">
               Categories
             </a>
@@ -60,6 +60,9 @@ function TopBar() {
               className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-200"
               onClick={() => navigate('/login')}
             >
+              <div className="hidden sm:block text-xl font-semibold">
+                Log In
+              </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -74,7 +77,6 @@ function TopBar() {
                   d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                 />
               </svg>
-              <div className="hidden sm:block text-xl">Log In</div>
             </button>
           </div>
           {/* HAMBURGER */}
