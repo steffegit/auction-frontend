@@ -20,16 +20,16 @@ function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
             {price}
           </span>
         </div>
-        <div className="flex justify-between items-center mt-6 w-full text-sm">
-          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black rounded-sm">
+        <div className="flex justify-between items-center mt-4 w-full text-sm">
+          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black border-opacity-25 rounded-md bg-textColor">
             <div className=" font-mono text-3xl">{days}</div>
             <p className="italic">days</p>
           </div>
-          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black rounded-sm">
+          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black border-opacity-25 rounded-md bg-textColor">
             <div className=" font-mono text-3xl">{hours}</div>
             <p className="italic">hours</p>
           </div>
-          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black rounded-sm">
+          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black border-opacity-25 rounded-md bg-textColor">
             <div className=" font-mono text-3xl">0</div>
             <p className="italic">mins</p>
           </div>
@@ -40,7 +40,7 @@ function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
         {/* TODO:  CHANGE THE COLOR OF THE FOCUS COMPONENT */}
         <button
           type="button"
-          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-purple-700 to-indigo-700 sm:py-2 sm:px-6 focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
+          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-purple-700 to-indigo-700 sm:py-2 sm:px-6 focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md mt-2"
         >
           Place a bid
         </button>

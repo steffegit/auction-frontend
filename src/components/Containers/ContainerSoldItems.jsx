@@ -7,7 +7,7 @@ function ContainerSoldItem({ data }) {
       <div className="flex items-center justify-end">
         <h1 className="text-3xl sm:text-5xl font-bold">Sold Items</h1>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         {data &&
           data.slice(0, 6)?.map((_, idx) => (
             <div key={data[idx].id}>
