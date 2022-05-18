@@ -16,7 +16,7 @@ function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
           <p className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis ">
             {title}
           </p>
-          <span className="p-2 px-3 text-sm bg-orange-400 rounded-full leading-3 font-semibold shadow-sm">
+          <span className="p-2 px-3 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm">
             {price}
           </span>
         </div>
@@ -40,7 +40,7 @@ function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
         {/* TODO:  CHANGE THE COLOR OF THE FOCUS COMPONENT */}
         <button
           type="button"
-          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-blue-700 to-pink-400 sm:py-2 sm:px-6 focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
+          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-[#42097A] to-[#8B66CC] sm:py-2 sm:px-6 focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md"
         >
           Place a bid
         </button>

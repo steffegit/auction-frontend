@@ -9,9 +9,9 @@
 }
 
 #root {
-  --bg-color: #FEFEFE;
-  --primary: #3B2D60;
-  --secondary: #E78DD2;
+  --bg-color: #f8f8f8;
+  --primary: #390099;
+  --secondary: #8B66CC;
   --text-color: #DDE6FF;
-  --dark-color: #DFB59C;
+  --accent: #ffbd00;
 }

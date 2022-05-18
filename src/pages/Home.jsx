@@ -11,7 +11,7 @@ function Home() {
   const { promotedCars, soldCars, currentCars } = useContext(SiteContext)
 
   return (
-    <div className="flex flex-col max-w-5xl mx-auto scroll-smooth bg-bgColor">
+    <div className="flex flex-col max-w-5xl mx-auto scroll-smooth">
       <TopBar />
       <Ads />
       <ContainerFeaturedItems data={promotedCars} />

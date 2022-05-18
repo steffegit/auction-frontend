@@ -1,11 +1,11 @@
 import React from 'react'
 import FeaturedItemCard from '../Cards/FeaturedItemCard'
 
-const scrollContainer = document.querySelector('#scrollContainer')
-scrollContainer.addEventListener('wheel', (e) => {
-  e.preventDefault()
-  scrollContainer.scrollLeft += e.deltaY
-})
+// const scrollContainer = document.querySelector('#scrollContainer')
+// scrollContainer.addEventListener('wheel', (e) => {
+//   e.preventDefault()
+//   scrollContainer.scrollLeft += e.deltaY
+// })
 
 function ContainerFeaturedItems({ data }) {
   return (

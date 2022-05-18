@@ -31,7 +31,7 @@ function CurrentlyListedCard({
       <div className="flex items-center">
         <a
           href="#view"
-          className="flex w-20 h-10 justify-center items-center bg-sky-700 text-white rounded-full shadow-md scale-90 sm:scale-100 hover:w-[6rem] transition-all"
+          className="flex w-20 h-10 justify-center items-center bg-primary text-white rounded-full shadow-md scale-90 sm:scale-100 hover:w-[6rem] transition-all"
         >
           View
         </a>

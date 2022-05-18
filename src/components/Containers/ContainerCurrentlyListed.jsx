@@ -26,7 +26,7 @@ function ContainerCurrentlyListed({ data }) {
         <div className="w-full mt-5">
           <button
             type="button"
-            className="w-full p-2 text-center ring-2 rounded-md font-medium text-xl shadow-sm hover:bg-sky-500 transition-all focus:ring-4"
+            className="w-full p-2 text-center ring-2 rounded-md font-medium text-xl shadow-sm hover:bg-primary  hover:text-white transition-all focus:ring-4 focus:ring-secondary ring-primary"
           >
             See all listed items
           </button>
