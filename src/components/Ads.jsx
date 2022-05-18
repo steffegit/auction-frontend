@@ -2,7 +2,7 @@ import React from 'react'
 
 function Ads() {
   return (
-    <div className="flex flex-col bg-primary space-y-1 sm:rounded-md sm:mx-6 sm:px-4">
+    <div className="flex flex-col bg-indigo-700 space-y-1 sm:rounded-md sm:mx-6 sm:px-4">
       <div className="flex font-bold p-5 pt-7 text-xl text-white justify-center text-center">
         Need some advice on what to bid? Need more info about your next shiny
         car? Talk to our representatives by using our SupportPlus Service!
