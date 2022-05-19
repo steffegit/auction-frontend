@@ -71,7 +71,7 @@ function SearchBar({ items, loading }) {
             </svg>
           )}
         </div>
-        {!loading && show && filteredData.length !== 0 && (
+        {show && filteredData.length !== 0 && (
           <div className="absolute w-full top-10 mt-2 p-2 flex flex-col z-20 bg-white border border-slate-300 shadow-md rounded-md">
             {filteredData.slice(0, 4).map((item) => (
               <div

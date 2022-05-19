@@ -2,35 +2,16 @@ import React, { useState, Fragment, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
 import SearchBar from './SearchBar'
-import axios from 'axios'
 
-const apiPath = 'https://auction-website89.herokuapp.com/main'
+import { SiteContext } from './Context/Context'
+import { useContext } from 'react'
 
 function TopBar() {
   const navigate = useNavigate()
 
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const { allCars } = useContext(SiteContext)
 
   const [showHambuger, setShowHambuger] = useState(false)
-
-  const fetchData = async () => {
-    try {
-      const res = await axios.get(apiPath)
-      setData(res.data)
-      setError(null)
-    } catch (err) {
-      setError(err.message)
-      setData(null)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
 
   return (
     <div className="flex flex-col p-3 py-5 w-full space-y-4">
@@ -148,7 +129,7 @@ function TopBar() {
           </a>
         </div>
       </Transition>
-      <SearchBar items={data} loading={loading} />
+      <SearchBar items={allCars} />
     </div>
   )
 }

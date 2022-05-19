@@ -16,7 +16,7 @@ function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
           <p className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis ">
             {title}
           </p>
-          <span className="p-2 px-3 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm scale-90 sm:scale-100">
+          <span className="p-2 px-3 -mr-1 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm scale-90 ">
             {price}
           </span>
         </div>
