@@ -7,7 +7,7 @@ import axios from 'axios'
 const apiPath = 'https://auction-website89.herokuapp.com/main'
 
 function TopBar() {
-  let navigate = useNavigate()
+  const navigate = useNavigate()
 
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
