@@ -14,7 +14,7 @@ function TopBar() {
   const [showHambuger, setShowHambuger] = useState(false)
 
   return (
-    <div className="flex flex-col p-3 py-5 w-full space-y-4">
+    <div className="flex flex-col p-3 py-5 max-w-5xl mx-auto space-y-4">
       <div className="flex justify-between items-center">
         <div className="text-xl sm:text-3xl font-bold">
           <a href="/">AuctionaX</a>
@@ -38,7 +38,7 @@ function TopBar() {
           <div>
             <button
               type="button"
-              className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-200"
+              className="flex items-center space-x-2 p-2 pl-0 sm:pl-2 rounded-md hover:bg-gray-200"
               onClick={() => navigate('/login')}
             >
               <div className="hidden sm:block text-xl font-semibold">
