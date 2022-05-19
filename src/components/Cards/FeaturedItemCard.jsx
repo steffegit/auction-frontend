@@ -2,7 +2,7 @@ import React from 'react'
 
 function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
   return (
-    <div className="flex flex-col p-5 m-2 h-max w-[275px] border border-gray-300 space-y-6 rounded-lg shadow-md">
+    <div className="flex flex-col p-5 h-max w-[235px] border border-gray-300 space-y-6 rounded-lg shadow-md">
       <div className="flex justify-center items-center pt-1 -mb-2">
         <img
           src={pic}
@@ -16,20 +16,20 @@ function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
           <p className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis ">
             {title}
           </p>
-          <span className="p-2 px-3 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm">
+          <span className="p-2 px-3 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm scale-90 sm:scale-100">
             {price}
           </span>
         </div>
         <div className="flex justify-between items-center mt-4 w-full text-sm">
-          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black border-opacity-25 rounded-md bg-textColor">
+          <div className="flex flex-col items-center justify-center px-3 py-1 border border-black border-opacity-25 rounded-md bg-textColor text-sm">
             <div className=" font-mono text-3xl">{days}</div>
             <p className="italic">days</p>
           </div>
-          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black border-opacity-25 rounded-md bg-textColor">
+          <div className="flex flex-col items-center justify-center px-3 py-1 border border-black border-opacity-25 rounded-md bg-textColor text-sm">
             <div className=" font-mono text-3xl">{hours}</div>
             <p className="italic">hours</p>
           </div>
-          <div className="flex flex-col items-center justify-center px-4 py-2 border border-black border-opacity-25 rounded-md bg-textColor">
+          <div className="flex flex-col items-center justify-center px-3 py-1 border border-black border-opacity-25 rounded-md bg-textColor text-sm">
             <div className=" font-mono text-3xl">0</div>
             <p className="italic">mins</p>
           </div>

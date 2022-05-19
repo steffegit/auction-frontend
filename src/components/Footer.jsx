@@ -4,7 +4,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white mt-10 rounded-none sm:rounded-lg">
+    <footer className="bg-gray-800 text-white mt-10 rounded-none sm:rounded-lg ">
       <div className="grid grid-cols-2 gap-8 py-8 px-6 text-center">
         <div>
           <h2 className="mb-6 font-semibold uppercase">AuctionaX</h2>
@@ -80,7 +80,7 @@ function Footer() {
           <a
             href="https://github.com/CodexDevv"
             target="_blank"
-            class=" hover:bg-[#E1306C] rounded-full p-2"
+            class="hover:bg-[#E1306C] rounded-full p-2"
           >
             <svg
               class="w-8 h-8"

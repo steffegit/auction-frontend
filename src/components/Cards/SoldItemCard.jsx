@@ -10,7 +10,7 @@ function SoldItem({ title, price, days, hours, km, type, classic, pic }) {
             alt="placeholder"
             className="w-[14rem] h-[6rem] sm:w-[24rem] sm:h-[12rem] object-cover rounded-sm"
           />
-          <div className="absolute text-black font-extrabold px-2 py-1 rounded-lg bg-accent scale-75 top-1 right-0">
+          <div className="absolute text-black font-extrabold px-2 py-1 rounded-lg bg-accent scale-[65%] top-0 -right-1 sm:scale-75 sm:top-1 sm:right-0">
             <span>SOLD</span>
           </div>
         </div>
