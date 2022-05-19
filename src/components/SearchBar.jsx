@@ -25,6 +25,11 @@ function SearchBar({ items, loading }) {
     setWordEntered('')
   }
 
+  const even = (number) => {
+    if (number % 2 === 0) return true
+    return false
+  }
+
   return (
     <div>
       <div className="relative flex items-center border border-slate-300 rounded-md focus:border-sky-500 font-medium">
@@ -73,9 +78,11 @@ function SearchBar({ items, loading }) {
         </div>
         {show && filteredData.length !== 0 && (
           <div className="absolute w-full top-10 mt-2 p-2 flex flex-col z-20 bg-white border border-slate-300 shadow-md rounded-md">
-            {filteredData.slice(0, 4).map((item) => (
+            {filteredData.slice(0, 4).map((item, idx) => (
               <div
-                className="hover:bg-gray-100 text-black group flex w-full items-center rounded-md px-2 py-2 text-sm space-x-2"
+                className={`${
+                  even(idx) ? 'bg-white' : 'bg-gray-100'
+                }  text-black group flex w-full items-center rounded-md px-2 py-2 text-sm space-x-2 hover:bg-[#2872b020] bg-opacity-50`}
                 key={item.id}
               >
                 <img

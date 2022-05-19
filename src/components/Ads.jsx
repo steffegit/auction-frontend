@@ -13,7 +13,7 @@ function Ads() {
       <div className="flex space-x-4 px-2 pb-6 sm:p-2">
         <a
           href="#ad"
-          className="relative hover:scale-105 transition-all bg-black rounded-lg z-20 overflow-hidden"
+          className="relative hover:scale-105 transition-all bg-black rounded-lg z-10 overflow-hidden"
           onMouseEnter={() => setShowFirst(true)}
           onMouseLeave={() => setShowFirst(false)}
         >
@@ -32,7 +32,7 @@ function Ads() {
         </a>
         <a
           href="#ad"
-          className="hover:scale-105 transition-all bg-black rounded-lg z-20 overflow-hidden"
+          className="relative hover:scale-105 transition-all bg-black rounded-lg z-10 overflow-hidden"
           onMouseEnter={() => setShowSecond(true)}
           onMouseLeave={() => setShowSecond(false)}
         >
