@@ -83,7 +83,7 @@ function SearchBar({ items, loading }) {
                 href="/"
                 className={`${
                   even(idx) ? 'bg-white' : 'bg-gray-100'
-                }  text-black group flex w-full items-center rounded-md px-2 py-2 text-sm space-x-2 hover:bg-[#2872b020] bg-opacity-50`}
+                }  text-black group flex w-full items-center rounded-md px-2 py-2 text-sm space-x-2 hover:bg-[#2872b020] bg-opacity-50 transition-all`}
                 key={item.id}
               >
                 <img
