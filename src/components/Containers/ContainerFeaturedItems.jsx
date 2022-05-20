@@ -6,7 +6,9 @@ function ContainerFeaturedItems({ data }) {
     <div>
       <div className="flex items-end justify-between pt-12 px-3 text-3xl font-bold mb-4 sm:mb-6 ">
         <div>Featured Auctions</div>
-        <a className="text-lg sm:text-lg hover:underline">See all</a>
+        <a className="text-lg sm:text-lg hover:underline" href="#seeall">
+          See all
+        </a>
       </div>
 
       <div className="hidden lg:flex flex-row sm:justify-center sm:items-center sm:overflow-none sm:scrollbar-hide overflow-x-scroll scrollbar-show space-x-2 sm:space-x-4 pl-1">

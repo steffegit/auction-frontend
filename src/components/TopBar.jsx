@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from 'react'
+import React, { useState, Fragment } from 'react'
 import { Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
 import SearchBar from './SearchBar'
@@ -114,7 +114,7 @@ function TopBar() {
         leaveFrom="transform opacity-100 translate-x-0"
         leaveTo="transform opacity-0 translate-x-[999px]"
       >
-        <div className="h-screen w-full absolute right-0 top-0 bottom-0 left-0 justify-start items-end z-30 flex flex-col bg-white space-y-2 text-xl font-semibold pr-4">
+        <div className="h-[3000px] w-full absolute right-0 top-0 bottom-0 left-0 justify-start items-end z-30 flex flex-col bg-white space-y-2 text-xl font-semibold pr-4">
           <button
             type="button"
             onClick={() => setShowHambuger(false)}
@@ -137,25 +137,25 @@ function TopBar() {
           <div className="flex flex-col w-1/2 px-2 pl-4">
             <a
               href="#categories"
-              className="hover:underline border-b border-slate-300 w-full text-right py-4"
+              className="hover:underline border-b border-slate-300 w-full text-right pt-4 pb-2"
             >
               Categories
             </a>
             <a
               href="#deals"
-              className="hover:underline border-b border-slate-300 w-full text-right py-4"
+              className="hover:underline border-b border-slate-300 w-full text-right pt-4 pb-2"
             >
               Deals
             </a>
             <a
               href="/post"
-              className="hover:underline border-b border-slate-300 w-full text-right py-4"
+              className="hover:underline border-b border-slate-300 w-full text-right pt-4 pb-2"
             >
               List Item
             </a>
             <a
               href="#help"
-              className="hover:underline border-b border-slate-300 w-full text-right py-4"
+              className="hover:underline border-b border-slate-300 w-full text-right pt-4 pb-2"
             >
               Help
             </a>
