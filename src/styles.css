@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: #f8f8f8;
 }
 .swiper {
   width: 100%;
