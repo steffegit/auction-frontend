@@ -17,13 +17,14 @@ function CurrentlyListedCard({
           <img
             src={pic}
             className="w-12 h-10 sm:w-16 sm:h-12 rounded-md object-cover"
+            alt="listed-car"
           />
         </div>
         <div className="flex flex-col items-start">
           <div className="w-max font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
             {title}
           </div>
-          <div className="text-xs sm:text-sm font-extralight">
+          <div className="text-xs sm:text-sm font-light">
             Listed for <strong>{price}</strong>
           </div>
         </div>

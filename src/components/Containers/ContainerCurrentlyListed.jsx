@@ -5,7 +5,7 @@ function ContainerCurrentlyListed({ data }) {
   return (
     <div>
       <div className="flex flex-col p-3 py-5 pb-0 space-y-1">
-        <div className=" font-bold text-center text-3xl mb-5 sm:mb-10 border-y-2 py-10 bg-gray-100 rounded-sm">
+        <div className=" font-bold text-center text-3xl mb-5 sm:mb-10 border-y-2 py-10 bg-gray-100 rounded-sm -mx-3">
           Currently Listed
         </div>
         {data &&
