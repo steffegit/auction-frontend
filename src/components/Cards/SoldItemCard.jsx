@@ -1,10 +1,10 @@
 import React from 'react'
 
-function SoldItem({ title, price, days, hours, km, type, classic, pic }) {
+function SoldItem({ id, title, price, days, hours, km, type, classic, pic }) {
   return (
     <div className="flex flex-col border border-gray-300 rounded-lg shadow-md p-5 space-y-4">
       <div className="flex justify-center items-center pt-1">
-        <div className="relative">
+        <a href={`/bids/${id}`} className="relative">
           <img
             src={pic}
             alt="placeholder"
@@ -13,12 +13,15 @@ function SoldItem({ title, price, days, hours, km, type, classic, pic }) {
           <div className="absolute text-black font-extrabold px-2 py-1 rounded-lg bg-accent scale-[65%] top-0 -right-1 sm:scale-75 sm:top-1 sm:right-0">
             <span>SOLD</span>
           </div>
-        </div>
+        </a>
       </div>
       <div>
-        <h1 className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
+        <a
+          href={`/bids/${id}`}
+          className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis hover:bg-gray-300"
+        >
           {title}
-        </h1>
+        </a>
         <p className="text-sm font-light">
           Sold at{' '}
           <strong>

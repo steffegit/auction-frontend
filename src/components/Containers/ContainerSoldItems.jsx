@@ -12,6 +12,7 @@ function ContainerSoldItem({ data }) {
           data.slice(0, 6)?.map((_, idx) => (
             <div key={data[idx].id}>
               <SoldItemCard
+                id={data[idx].id}
                 title={data[idx].title}
                 price={data[idx].price}
                 days={data[idx].days}

@@ -22,9 +22,12 @@ function ItemCard({ id, title, price, days, hours, km, type, classic, pic }) {
           >
             {title}
           </a>
-          <span className="p-2 px-3 -mr-1 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm scale-90 ">
+          <a
+            href={`/bids/${id}`}
+            className="p-2 px-3 -mr-1 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm scale-90 hover:underline"
+          >
             {price}
-          </span>
+          </a>
         </div>
         <div className="flex justify-between items-center mt-4 w-full text-sm">
           <div className="flex flex-col items-center justify-center px-3 py-1 border border-black border-opacity-25 rounded-md bg-textColor text-sm">
@@ -42,14 +45,11 @@ function ItemCard({ id, title, price, days, hours, km, type, classic, pic }) {
         </div>
       </div>
       {/* BID BUTTON*/}
-      <div>
-        <button
-          type="button"
-          className="w-full p-3 rounded-md text-white bg-gradient-to-r from-purple-700 to-indigo-700 sm:py-2 sm:px-6 focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md shadow-purple-300 -mt-2 transition-all"
-        >
+      <a href={`/bids/${id}`}>
+        <button className="w-full p-3 rounded-md text-white bg-gradient-to-r from-purple-700 to-indigo-700 sm:py-2 sm:px-6 focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md shadow-purple-300 -mt-2 transition-all">
           Place a bid
         </button>
-      </div>
+      </a>
     </div>
   )
 }
