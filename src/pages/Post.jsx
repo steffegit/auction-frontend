@@ -1,12 +1,10 @@
 import React from 'react'
-import TopBar from '../components/TopBar'
 
 function Post() {
   return (
-    <div className="flex flex-col mx-auto overflow-hidden">
-      <TopBar />
+    <div className="flex flex-col max-w-5xl mx-auto scroll-smooth pb-5">
       <div className="flex p-5 mt-10 overflow-hidden justify-center">
-        <div className="ring-1 ring-black p-5 w-full rounded-md space-y-8">
+        <div className="flex flex-col justify-center ring-1 ring-black p-5 w-full rounded-md space-y-8">
           <div className="text-5xl font-bold whitespace-pre-line mb-[4rem]">
             List an{'\n'} auction item.
           </div>
@@ -52,7 +50,7 @@ function Post() {
                 className="rounded-sm"
               />
               <div className="flex flex-col">
-                <a href="#">
+                <a href="#viewimg">
                   <div className="text-md font-semibold">
                     img/2131231/321314/imd
                   </div>
