@@ -1,21 +1,27 @@
 import React from 'react'
 
-function ItemCard({ title, price, days, hours, km, type, classic, pic }) {
+function ItemCard({ id, title, price, days, hours, km, type, classic, pic }) {
   return (
     <div className="flex flex-col p-5 h-max w-[235px] border border-gray-300 space-y-6 rounded-lg shadow-md">
-      <div className="flex justify-center items-center pt-1 -mb-2">
+      <a
+        href={`/bids/${id}`}
+        className="flex justify-center items-center pt-1 -mb-2"
+      >
         <img
           src={pic}
           alt="car-pic"
           className="rounded-sm w-[20rem] h-[10rem] object-cover"
         />
-      </div>
+      </a>
       {/* DESCRIPTION */}
       <div>
         <div className="flex items-center justify-between mb-2">
-          <p className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis ">
+          <a
+            href={`bids/${id}`}
+            className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis hover:bg-gray-300 "
+          >
             {title}
-          </p>
+          </a>
           <span className="p-2 px-3 -mr-1 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm scale-90 ">
             {price}
           </span>

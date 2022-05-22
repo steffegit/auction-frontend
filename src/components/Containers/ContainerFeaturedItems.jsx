@@ -16,6 +16,7 @@ function ContainerFeaturedItems({ data }) {
           data?.slice(0, 4)?.map((_, idx) => (
             <div key={data[idx].id}>
               <FeaturedItemCard
+                id={data[idx].id}
                 title={data[idx].title}
                 price={data[idx].price}
                 days={data[idx].days}

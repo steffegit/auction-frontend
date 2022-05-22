@@ -14,11 +14,29 @@ const fetchAPI = async () => {
   }
 }
 
+const fetchBidAPI = async (id) => {
+  try {
+    const res = await axios.get(
+      `https://auction-website89.herokuapp.com/bids/${id}`
+    )
+    return res.data
+  } catch (error) {
+    console.log(error)
+    return null
+  }
+}
+
 export const SiteContextProvider = ({ children }) => {
   const [promotedCars, setPromotedCars] = useState([])
   const [soldCars, setSoldCars] = useState([])
   const [currentCars, setCurrentCars] = useState([])
   const [allCars, setAllCars] = useState([])
+  const [bid, setBid] = useState({})
+
+  const getBidData = async (id) => {
+    const _bid = await fetchBidAPI(id)
+    setBid(_bid)
+  }
 
   useEffect(() => {
     const getCars = async () => {
@@ -35,7 +53,7 @@ export const SiteContextProvider = ({ children }) => {
 
   return (
     <SiteContext.Provider
-      value={{ allCars, promotedCars, soldCars, currentCars }}
+      value={{ allCars, promotedCars, soldCars, currentCars, getBidData, bid }}
     >
       {children}
     </SiteContext.Provider>

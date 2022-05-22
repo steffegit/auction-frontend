@@ -4,7 +4,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="fixed w-full bottom-0 bg-gray-800 text-white mt-10">
+    <footer className="bg-gray-800 text-white mt-10">
       <div className="grid grid-cols-2 gap-8 py-8 px-6 text-center">
         <div>
           <h2 className="mb-6 font-semibold uppercase">AuctionaX</h2>

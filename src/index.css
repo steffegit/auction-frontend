@@ -8,6 +8,10 @@
    box-sizing: border-box; 
 }
 
+html, body {
+  min-height: 100vh;
+}
+
 #root {
   --bg-color: #f8f8f8;
   --primary: #2872b3;
