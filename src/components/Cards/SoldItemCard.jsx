@@ -16,11 +16,10 @@ function SoldItem({ id, title, price, days, hours, km, type, classic, pic }) {
         </a>
       </div>
       <div>
-        <a
-          href={`/bids/${id}`}
-          className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis hover:bg-gray-300"
-        >
-          {title}
+        <a href={`/bids/${id}`} className="hover:bg-gray-300">
+          <div className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
+            {title}
+          </div>
         </a>
         <p className="text-sm font-light">
           Sold at{' '}
