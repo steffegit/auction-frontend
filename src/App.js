@@ -7,6 +7,8 @@ import TopBar from './components/TopBar'
 import Footer from './components/Footer'
 
 import 'swiper/css'
+import 'swiper/css/navigation'
+
 import './styles.css'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
