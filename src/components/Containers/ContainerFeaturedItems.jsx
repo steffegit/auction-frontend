@@ -7,7 +7,7 @@ function ContainerFeaturedItems({ data }) {
       <div className="flex items-end justify-between pt-12 px-3 text-3xl font-bold mb-4 sm:mb-6 ">
         <div>Featured Auctions</div>
         <a
-          className="flex justify-end text-lg sm:text-lg hover:underline w-full"
+          className="flex justify-end text-lg sm:text-lg hover:underline w-1/2"
           href="#seeall"
         >
           <div>See all</div>
@@ -16,7 +16,7 @@ function ContainerFeaturedItems({ data }) {
 
       <div className="hidden lg:flex flex-row sm:justify-center sm:items-center sm:overflow-none sm:scrollbar-hide overflow-x-scroll scrollbar-show space-x-2 sm:space-x-4 pl-1">
         {data &&
-          data?.slice(0, 4)?.map((_, idx) => (
+          data?.slice(0, 5)?.map((_, idx) => (
             <div key={data[idx].id}>
               <FeaturedItemCard
                 id={data[idx].id}

@@ -6,7 +6,7 @@ function NotFoundPage() {
   const navigate = useNavigate()
 
   return (
-    <div className="flex flex-col max-w-5xl mx-auto scroll-smooth p-20 mb-20 justify-center items-center">
+    <div className="flex flex-col max-w-7xl mx-auto scroll-smooth p-20 mb-20 justify-center items-center">
       <div className="text-[5rem]">404</div>
       <div>Page not found</div>
       <button

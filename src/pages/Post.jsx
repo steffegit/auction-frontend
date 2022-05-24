@@ -2,7 +2,7 @@ import React from 'react'
 
 function Post() {
   return (
-    <div className="flex flex-col max-w-5xl mx-auto scroll-smooth pb-5">
+    <div className="flex flex-col max-w-7xl mx-auto scroll-smooth pb-5">
       <div className="flex p-5 mt-10 overflow-hidden justify-center">
         <div className="flex flex-col justify-center ring-1 ring-black p-5 w-full rounded-md space-y-8">
           <div className="text-5xl font-bold whitespace-pre-line mb-[4rem]">
