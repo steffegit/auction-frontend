@@ -6,7 +6,7 @@ function Ads() {
 
   return (
     <div className="flex flex-col lg:flex-row sm:max-h-[300px] md:max-h-[600px] bg-indigo-700 space-y-1 sm:rounded-md sm:mx-4 sm:px-4 sm:py-4 overflow-hidden">
-      <div className="flex font-bold sm:w-[200] p-5 pt-7 text-xl text-white justify-center text-center">
+      <div className="flex font-bold sm:w-[200] p-5 pt-7 text-xl text-white justify-center items-center text-center">
         Need some advice on what to bid? Need more info about your next shiny
         car? Talk to our representatives by using our SupportPlus Service!
       </div>

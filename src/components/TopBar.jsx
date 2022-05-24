@@ -15,7 +15,7 @@ function TopBar() {
 
   return (
     <div className="flex flex-col p-3 py-5 max-w-7xl mx-auto space-y-4">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center sm:py-4">
         <div className="text-xl sm:text-3xl font-bold">
           <a href="/">AuctionaX</a>
         </div>

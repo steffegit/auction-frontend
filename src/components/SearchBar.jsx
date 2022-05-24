@@ -32,7 +32,7 @@ function SearchBar({ items, loading }) {
 
   return (
     <div>
-      <div className="relative flex items-center border border-slate-300 rounded-md focus:border-sky-500 font-medium">
+      <div className="relative flex items-center bg-bgColor border border-slate-300 rounded-md focus:border-sky-500 font-medium">
         <input
           type="text"
           placeholder="Search anything from here"

@@ -17,7 +17,7 @@ function Bid() {
 
   return (
     <div className="flex flex-col sm:flex-row max-w-7xl mx-auto p-5 space-y-4 sm:space-x-4 sm:space-y-0">
-      <div className="w-full sm:w-2/3" id="container-left">
+      <div className="w-full sm:w-2/3 space-y-4" id="container-left">
         <div className="w-full bg-white p-6 rounded-md">
           <Swiper
             pagination={true}
@@ -39,6 +39,15 @@ function Bid() {
               />
             </SwiperSlide>
           </Swiper>
+        </div>
+        <div className="w-full bg-white p-6 rounded-md space-y-4">
+          <div className="text-2xl font-bold uppercase">Description</div>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
+            minus, aliquid iste amet ex neque consectetur veniam atque culpa
+            enim, officia ducimus asperiores recusandae voluptatum autem
+            praesentium? Repellendus, quo adipisci!
+          </div>
         </div>
       </div>
       <div className="w-full sm:w-1/2 h-max space-y-4" id="container-right">
@@ -98,6 +107,7 @@ function Bid() {
             </div>
           </div>
         </div>
+        {/* INSTEAD OF LOCALIZATION MAYBE INFO ABOUT THE SELLER  */}
         <div className="w-full h-full space-y-8 bg-white p-6 rounded-md">
           <div className="font-bold uppercase">Localization</div>
           <div className="flex space-x-2 items-start">

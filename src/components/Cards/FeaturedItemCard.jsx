@@ -2,7 +2,7 @@ import React from 'react'
 
 function ItemCard({ id, title, price, days, hours, km, type, classic, pic }) {
   return (
-    <div className="flex flex-col p-5 h-max w-[235px] border border-gray-300 space-y-6 rounded-lg shadow-md">
+    <div className="flex flex-col p-5 h-max w-[235px] bg-bgColor border border-gray-300 space-y-6 rounded-lg shadow-md">
       <a
         href={`/bids/${id}`}
         className="flex justify-center items-center pt-1 -mb-2"
