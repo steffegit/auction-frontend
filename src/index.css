@@ -4,7 +4,12 @@
 
 :root{
   --swiper-navigation-color: white !important;
---swiper-theme-color: white !important;
+  --swiper-theme-color: white !important;
+  --bg-color: #f8f8f8;
+  --primary: #2872b3;
+  --secondary: #4b9ce4;
+  --text-color: #f8f6f6;
+  --accent: #f9c243;
 }
 
 * { 
@@ -17,10 +22,10 @@ html, body {
   min-height: 100vh;
 }
 
-#root {
-  --bg-color: #f8f8f8;
-  --primary: #2872b3;
-  --secondary: #4b9ce4;
-  --text-color: #f8f6f6;
-  --accent: #f9c243;
+.backface-visible {
+  backface-visibility: visible;
+}
+
+.backface-invisible {
+  backface-visibility: hidden;
 }

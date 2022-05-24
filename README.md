@@ -1,8 +1,5 @@
 # TODO:
 
-- Fix `See All` button
-- Put Max-width on `See All Listed Items`
-- make OnCLick on the card, not only the button.
 - Work on the bidding page (should have an Image Carousel, and info on the right - name, pricing - and bottom - description)
 
 <br>
@@ -19,3 +16,6 @@
 - Make the `CurrentlyListedCard.jsx` text bigger and bigger padding on desktop.
 - Choose a color scheme
 - Later, change all Lorem Ipsum text to something relevant (mostly Done I believe)
+- Fix `See All` button
+- Put Max-width on `See All Listed Items`
+- make OnCLick on the card, not only the button.

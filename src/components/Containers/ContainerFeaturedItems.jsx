@@ -6,8 +6,11 @@ function ContainerFeaturedItems({ data }) {
     <div>
       <div className="flex items-end justify-between pt-12 px-3 text-3xl font-bold mb-4 sm:mb-6 ">
         <div>Featured Auctions</div>
-        <a className="text-lg sm:text-lg hover:underline" href="#seeall">
-          See all
+        <a
+          className="flex justify-end text-lg sm:text-lg hover:underline w-full"
+          href="#seeall"
+        >
+          <div>See all</div>
         </a>
       </div>
 
