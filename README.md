@@ -1,5 +1,6 @@
 # TODO:
 
+- Redo the topbar (want it to be a fixed one so that when you scroll it stays on top of the screen)
 - Work on the bidding page (should have an Image Carousel, and info on the right - name, pricing - and bottom - description)
 
 <br>

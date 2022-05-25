@@ -41,12 +41,12 @@ function Bid() {
           </Swiper>
         </div>
         <div className="w-full bg-white p-6 rounded-md space-y-4">
-          <div className="text-2xl font-bold uppercase">Description</div>
+          <div className="text-2xl font-medium uppercase">Description</div>
           <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
-            minus, aliquid iste amet ex neque consectetur veniam atque culpa
-            enim, officia ducimus asperiores recusandae voluptatum autem
-            praesentium? Repellendus, quo adipisci!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            provident quis illo sapiente molestiae iste, inventore nam. Illum
+            ullam ab beatae similique quibusdam quisquam voluptate consectetur,
+            perferendis nisi, labore ducimus?
           </div>
         </div>
       </div>
