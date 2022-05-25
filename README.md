@@ -1,6 +1,6 @@
 # TODO:
 
-- Redo the topbar (want it to be a fixed one so that when you scroll it stays on top of the screen)
+- Redo the Bid Page(on the right we'll have contact seller. info about seller, and bid on item, and on the description we'll have the name, category, price etc.)
 - Work on the bidding page (should have an Image Carousel, and info on the right - name, pricing - and bottom - description)
 
 <br>
