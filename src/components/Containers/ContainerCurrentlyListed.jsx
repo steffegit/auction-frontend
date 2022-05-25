@@ -27,7 +27,7 @@ function ContainerCurrentlyListed({ data }) {
         <div className="flex justify-center pt-5">
           <button
             type="button"
-            className="w-2/3 p-2 text-center ring-2 rounded-md font-medium text-xl shadow-sm hover:bg-primary  hover:text-white transition-all focus:ring-4 focus:ring-secondary ring-primary"
+            className="w-full sm:w-2/3 p-2 text-center ring-2 rounded-md font-medium text-xl shadow-sm hover:bg-primary hover:text-white transition-all focus:ring-4 focus:ring-secondary ring-primary"
           >
             See all listed items
           </button>

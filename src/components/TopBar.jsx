@@ -114,7 +114,7 @@ function TopBar() {
         leaveFrom="transform opacity-100 translate-x-0"
         leaveTo="transform opacity-0 translate-x-[999px]"
       >
-        <div className="h-[3000px] w-full absolute right-0 top-0 bottom-0 left-0 justify-start items-end z-30 flex flex-col bg-bgColor space-y-2 text-xl font-semibold pr-4">
+        <div className="h-[3000px] w-full absolute right-0 top-0 bottom-0 left-0 justify-start items-end z-30 flex flex-col bg-[#f2f4f5] space-y-2 text-xl font-semibold pr-4">
           <button
             type="button"
             onClick={() => setShowHambuger(false)}
