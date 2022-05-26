@@ -35,7 +35,7 @@ export const SiteContextProvider = ({ children }) => {
 
   const getBidData = async (id) => {
     const _bid = await fetchBidAPI(id)
-    setBid(_bid)
+    await setBid(_bid)
   }
 
   useEffect(() => {
