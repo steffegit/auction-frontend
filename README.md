@@ -1,5 +1,6 @@
 # TODO:
 
+- Redo the FetchBid and GetBid because it returns undefined sometimes.
 
 <br>
 

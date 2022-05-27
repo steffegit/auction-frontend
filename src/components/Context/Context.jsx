@@ -6,7 +6,6 @@ export const SiteContext = createContext({})
 const fetchAPI = async () => {
   try {
     const res = await axios.get('https://auction-website89.herokuapp.com/main')
-
     return res.data
   } catch (error) {
     console.log(error)
@@ -33,11 +32,6 @@ export const SiteContextProvider = ({ children }) => {
   const [allCars, setAllCars] = useState([])
   const [bid, setBid] = useState({})
 
-  const getBidData = async (id) => {
-    const _bid = await fetchBidAPI(id)
-    await setBid(_bid)
-  }
-
   useEffect(() => {
     const getCars = async () => {
       const cars = await fetchAPI()
@@ -50,6 +44,10 @@ export const SiteContextProvider = ({ children }) => {
 
     getCars().catch(console.error)
   }, [])
+
+  const getBidData = async (id) => {
+    await fetchBidAPI(id).then((res) => setBid(res))
+  }
 
   return (
     <SiteContext.Provider

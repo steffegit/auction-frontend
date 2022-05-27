@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect, useContext, useState } from 'react'
 
 import { SiteContext } from '../components/Context/Context'
 import { useParams } from 'react-router-dom'
@@ -8,11 +8,12 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 function Bid() {
   let { id } = useParams()
+
   const { getBidData, bid } = useContext(SiteContext)
 
   useEffect(() => {
     getBidData(id)
-    // eslint-disable-next-line
+    console.log(bid)
   }, [])
 
   return (
