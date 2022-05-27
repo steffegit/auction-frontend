@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react'
+import React, { useEffect, useContext } from 'react'
 
 import { SiteContext } from '../components/Context/Context'
 import { useParams } from 'react-router-dom'
@@ -13,7 +13,7 @@ function Bid() {
 
   useEffect(() => {
     getBidData(id)
-    console.log(bid)
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -43,7 +43,7 @@ function Bid() {
             </Swiper>
           </div>
           <div className="w-full bg-white p-6 rounded-md space-y-4">
-            <div className="text-2xl font-medium uppercase">Description</div>
+            <div className="text-2xl font-semibold uppercase">Description</div>
             <div>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
               provident quis illo sapiente molestiae iste, inventore nam. Illum
@@ -59,7 +59,7 @@ function Bid() {
                 {bid?.title}
               </div>
               <a
-                href="#viewaudi"
+                href={`#view${bid?.brand}`}
                 className="text-lg font-light hover:underline"
               >
                 {bid?.brand} category

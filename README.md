@@ -1,6 +1,6 @@
 # TODO:
 
-- Redo the FetchBid and GetBid because it returns undefined sometimes.
+- Redo the FetchBid and GetBid because it returns undefined sometimes. (have to add loading or switch to using reactQuery)
 
 <br>
 
