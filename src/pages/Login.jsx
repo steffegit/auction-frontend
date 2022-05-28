@@ -2,9 +2,9 @@ import React from 'react'
 
 function Login() {
   return (
-    <div className="flex flex-col p-10 py-20 max-w-7xl bg-bgColor m-5 rounded-sm">
+    <div className="flex flex-col p-5 py-20 max-w-7xl mx-auto rounded-sm">
       <div className="text-3xl font-bold self-center mb-10">Login</div>
-      <form className="flex flex-col space-y-14">
+      <form className="flex flex-col space-y-14 max-w-xl mx-auto">
         <div className="space-y-4">
           <input
             type="email"
@@ -19,7 +19,7 @@ function Login() {
         </div>
         <button
           type="submit"
-          className="py-3 bg-slate-400 font-medium rounded-md text-black hover:bg-slate-200 hover:outline hover:outline-black transition-all"
+          className="py-3 bg-slate-400 font-medium rounded-md text-black hover:bg-slate-200 hover:outline hover:outline-black"
         >
           Login
         </button>
