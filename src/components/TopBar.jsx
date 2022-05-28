@@ -150,10 +150,10 @@ function TopBar() {
               Deals
             </a>
             <a
-              href="/post"
+              href="#specials"
               className="hover:underline border-b border-slate-300 w-full text-right pt-4 pb-2"
             >
-              List Item
+              Specials
             </a>
             <a
               href="#help"

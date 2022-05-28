@@ -43,12 +43,43 @@ function Bid() {
             </Swiper>
           </div>
           <div className="w-full bg-white p-6 rounded-md space-y-4">
-            <div className="text-2xl font-semibold uppercase">Description</div>
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              provident quis illo sapiente molestiae iste, inventore nam. Illum
-              ullam ab beatae similique quibusdam quisquam voluptate
-              consectetur, perferendis nisi, labore ducimus?
+            <div className="grid grid-cols-2 gap-4">
+              <div id="#firstrow">
+                <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                  <div className="font-bold">Make</div>
+                  <div>{bid?.brand}</div>
+                </div>
+                <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                  <div className="font-bold">Model</div>
+                  <div>{bid?.title}</div>
+                </div>
+                <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                  <div className="font-bold">Location</div>
+                  <div>New York</div>
+                </div>
+                <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                  <div className="font-bold">Fuel</div>
+                  <div>Gasoline</div>
+                </div>
+              </div>
+              <div id="#secondrow">
+                <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                  <div className="font-bold">Mileage</div>
+                  <div>{(bid?.km * 1000).toLocaleString()} km</div>
+                </div>
+                <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                  <div className="font-bold">Color</div>
+                  <div>Red</div>
+                </div>
+                <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                  <div className="font-bold">Type</div>
+                  <div>{bid?.type}</div>
+                </div>
+                <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                  <div className="font-bold">VIN</div>
+                  <div>vinhere</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -305,13 +336,44 @@ function Bid() {
             </div>
           </div>
         </div>
-        <div className="bg-white p-6 break-inside-avoid space-y-6">
-          <div className="text-2xl font-medium uppercase">Description</div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-            provident quis illo sapiente molestiae iste, inventore nam. Illum
-            ullam ab beatae similique quibusdam quisquam voluptate consectetur,
-            perferendis nisi, labore ducimus?
+        <div className="w-full bg-white p-6 rounded-md space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div id="#firstrow">
+              <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                <div className="font-bold">Make</div>
+                <div>{bid?.brand}</div>
+              </div>
+              <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                <div className="font-bold">Model</div>
+                <div>{bid?.title}</div>
+              </div>
+              <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                <div className="font-bold">Location</div>
+                <div>New York</div>
+              </div>
+              <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                <div className="font-bold">Fuel</div>
+                <div>Gasoline</div>
+              </div>
+            </div>
+            <div id="#secondrow">
+              <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                <div className="font-bold">Mileage</div>
+                <div>{(bid?.km * 1000).toLocaleString()} km</div>
+              </div>
+              <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                <div className="font-bold">Color</div>
+                <div>Red</div>
+              </div>
+              <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                <div className="font-bold">Type</div>
+                <div>{bid?.type}</div>
+              </div>
+              <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
+                <div className="font-bold">VIN</div>
+                <div>vinhere</div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="bg-white p-6 space-y-4 break-inside-avoid">
