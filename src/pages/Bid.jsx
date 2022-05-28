@@ -337,7 +337,7 @@ function Bid() {
           </div>
         </div>
         <div className="w-full bg-white p-6 rounded-md space-y-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1">
             <div id="#firstrow">
               <div className="flex justify-between p-4 bg-sky-50 mb-2 rounded-md">
                 <div className="font-bold">Make</div>
