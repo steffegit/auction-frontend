@@ -19,13 +19,16 @@ function Login() {
         </div>
         <button
           type="submit"
-          className="py-3 bg-slate-400 font-medium rounded-md text-black hover:bg-slate-200 hover:outline hover:outline-black"
+          className="py-3 bg-secondary font-medium rounded-md text-white hover:bg-primary"
         >
           Login
         </button>
       </form>
       <div className="flex mt-2 items-center justify-center">
-        <a href="#forgot" className="hover:underline opacity-75">
+        <a
+          href="#forgot"
+          className="hover:underline text-gray-400 hover:text-black"
+        >
           Forgot your password?
         </a>
       </div>

@@ -12,15 +12,15 @@ function ContainerSoldItem({ data }) {
           data.slice(0, 6)?.map((_, idx) => (
             <div key={data[idx].id}>
               <SoldItemCard
-                id={data[idx].id}
-                title={data[idx].title}
-                price={data[idx].price}
-                days={data[idx].days}
-                hours={data[idx].hours}
-                km={data[idx].km}
-                pic={data[idx].pic}
-                type={data[idx].type}
-                classic={data[idx].classic}
+                itemid={data[idx]?.id}
+                title={data[idx]?.title}
+                price={data[idx]?.price}
+                days={data[idx]?.days}
+                hours={data[idx]?.hours}
+                km={data[idx]?.km}
+                pic={data[idx]?.pic}
+                type={data[idx]?.type}
+                classic={data[idx]?.classic}
               />
             </div>
           ))}

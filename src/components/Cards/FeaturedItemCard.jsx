@@ -1,10 +1,20 @@
 import React from 'react'
 
-function ItemCard({ id, title, price, days, hours, km, type, classic, pic }) {
+function ItemCard({
+  itemid,
+  title,
+  price,
+  days,
+  hours,
+  km,
+  type,
+  classic,
+  pic,
+}) {
   return (
     <div className="flex flex-col p-5 h-max w-[235px] bg-bgColor border border-gray-300 space-y-6 rounded-lg shadow-md">
       <a
-        href={`/bids/${id}`}
+        href={`/bids/${itemid}`}
         className="flex justify-center items-center pt-1 -mb-2"
       >
         <img
@@ -17,13 +27,13 @@ function ItemCard({ id, title, price, days, hours, km, type, classic, pic }) {
       <div>
         <div className="flex items-center justify-between mb-2">
           <a
-            href={`bids/${id}`}
+            href={`bids/${itemid}`}
             className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis hover:bg-gray-300 "
           >
             {title}
           </a>
           <a
-            href={`/bids/${id}`}
+            href={`/bids/${itemid}`}
             className="p-2 px-3 -mr-1 text-sm bg-accent rounded-full leading-3 font-semibold shadow-sm scale-90 hover:underline"
           >
             {price}
@@ -45,7 +55,7 @@ function ItemCard({ id, title, price, days, hours, km, type, classic, pic }) {
         </div>
       </div>
       {/* BID BUTTON*/}
-      <a href={`/bids/${id}`}>
+      <a href={`/bids/${itemid}`}>
         <button className="w-full p-3 rounded-md text-white bg-gradient-to-r from-purple-700 to-indigo-700 sm:py-2 sm:px-6 focus:outline focus:outline-blue-500 focus:outline-offset-2 shadow-md -mt-2 transition-all hover:scale-105">
           <div>Place a bid</div>
         </button>

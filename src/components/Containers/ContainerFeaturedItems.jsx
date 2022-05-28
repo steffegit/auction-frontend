@@ -17,17 +17,17 @@ function ContainerFeaturedItems({ data }) {
       <div className="hidden lg:flex flex-row sm:justify-center sm:items-center sm:overflow-none sm:scrollbar-hide overflow-x-scroll scrollbar-show space-x-2 sm:space-x-4 pl-1">
         {data &&
           data?.slice(0, 5)?.map((_, idx) => (
-            <div key={data[idx].id}>
+            <div key={data[idx]?.id}>
               <FeaturedItemCard
-                id={data[idx].id}
-                title={data[idx].title}
-                price={data[idx].price}
-                days={data[idx].days}
-                hours={data[idx].hours}
-                km={data[idx].km}
-                pic={data[idx].pic}
-                type={data[idx].type}
-                classic={data[idx].classic}
+                itemid={data[idx]?.id}
+                title={data[idx]?.title}
+                price={data[idx]?.price}
+                days={data[idx]?.days}
+                hours={data[idx]?.hours}
+                km={data[idx]?.km}
+                pic={data[idx]?.pic}
+                type={data[idx]?.type}
+                classic={data[idx]?.classic}
               />
             </div>
           ))}
