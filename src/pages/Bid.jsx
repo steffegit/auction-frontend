@@ -13,8 +13,7 @@ function Bid() {
 
   useEffect(() => {
     getBidData(id)
-    // eslint-disable-next-line
-  }, [])
+  }, [id])
 
   return (
     <>

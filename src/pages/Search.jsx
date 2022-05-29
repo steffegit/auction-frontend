@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import SearchResultCard from '../components/Cards/SearchResultCard'
 import { SiteContext } from '../components/Context/Context'
 
 function Search() {
@@ -10,14 +11,15 @@ function Search() {
   const query = searchParams.get('q')
 
   useEffect(() => {
-    setData(allCars.filter((car) => car.brand === query))
-  }, [])
+    setData(allCars?.filter((car) => car?.brand === query))
+  }, [allCars, query])
 
   return (
-    <div className="flex flex-col max-w-7xl mx-auto p-5">
-      {data.map((item, idx) => (
-        <div>{item?.title}</div>
-      ))}
+    <div className="grid grid-cols-2 max-w-7xl mx-auto p-5 gap-2 sm:grid-cols-5 sm:space-y-0 sm:gap-4">
+      {data &&
+        data?.map((item, idx) => (
+          <SearchResultCard key={item?.id} data={item} />
+        ))}
     </div>
   )
 }
