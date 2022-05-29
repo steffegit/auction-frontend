@@ -25,7 +25,7 @@ function App() {
           <Route path="/post" element={<Post />} />
           <Route path="/bids/:id" element={<Bid />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/notfound" element={<NotFoundPage />} />
+          <Route path="/*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </Router>
