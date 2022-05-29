@@ -80,7 +80,7 @@ function SearchBar({ items, loading }) {
           <div className="absolute w-full top-10 mt-2 p-2 flex flex-col z-20 bg-white border border-slate-300 shadow-md rounded-md">
             {filteredData.slice(0, 4).map((item, idx) => (
               <a
-                href={`/bids/${item?.id}`}
+                href={`/search?q=${item?.id}`}
                 className={`${
                   even(idx) ? 'bg-white' : 'bg-gray-100'
                 }  text-black group flex w-full items-center rounded-md px-2 py-2 text-sm space-x-2 hover:bg-[#2872b020] bg-opacity-50 transition-all`}

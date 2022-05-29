@@ -3,6 +3,7 @@ import Post from './pages/Post'
 import NotFoundPage from './pages/NotFoundPage'
 import Bid from './pages/Bid'
 import Login from './pages/Login'
+import Search from './pages/Search'
 
 import TopBar from './components/TopBar'
 import Footer from './components/Footer'
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/post" element={<Post />} />
           <Route path="/bids/:id" element={<Bid />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/login" element={<Login />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
