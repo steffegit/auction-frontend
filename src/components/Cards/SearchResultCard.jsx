@@ -13,7 +13,7 @@ function SearchResultCard({ data }) {
         </a>
       </div>
       <div>
-        <a className="font-bold text-lg" href={`/bids/${data?.id}`}>
+        <a className="font-bold sm:text-lg" href={`/bids/${data?.id}`}>
           {data?.title}
         </a>
         <div className="">Price: {data?.price}</div>

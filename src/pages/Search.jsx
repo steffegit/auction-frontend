@@ -11,7 +11,8 @@ function Search() {
   const query = searchParams.get('q')
 
   useEffect(() => {
-    setData(allCars?.filter((car) => car?.brand === query))
+    const filtered = allCars?.filter((car) => car?.brand === query)
+    setData(filtered)
   }, [allCars, query])
 
   return (

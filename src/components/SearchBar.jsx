@@ -13,10 +13,14 @@ function SearchBar({ items, loading }) {
       return value.brand.toLowerCase().startsWith(searchWord.toLowerCase())
     })
 
+    const filteredBrands = newFilter?.map((item, idx) => {
+      return item.brand
+    })
+
     if (searchWord === '') {
       setFilteredData([])
     } else {
-      setFilteredData(newFilter)
+      setFilteredData([...new Set(filteredBrands)])
     }
   }
 
@@ -87,7 +91,7 @@ function SearchBar({ items, loading }) {
                 }  text-black group flex w-full items-center rounded-md px-2 py-2 text-sm space-x-2 hover:bg-[#2872b020] bg-opacity-50 transition-all`}
                 key={item?.id}
               >
-                <p className="text-sm pl-1">Search for {item?.brand}</p>
+                <p className="text-sm pl-1">Search for {item}</p>
               </a>
             ))}
           </div>
