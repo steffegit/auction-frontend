@@ -19,11 +19,11 @@ function SearchResultCard({ data }) {
             } transition-all`}
           />
           {data?.sold ? (
-            <div className="absolute bottom-2 left-2 p-1 px-2 text-sm bg-black text-white rounded-md bg-opacity-75">
+            <div className="absolute bottom-1 -left-2 p-1 px-2 text-sm bg-black text-white rounded-md bg-opacity-75 scale-75 sm:bottom-2 sm:left-2 sm:scale-100">
               Sold for {data?.price}
             </div>
           ) : (
-            <div className="absolute bottom-2 left-2 p-1 px-2 text-sm bg-slate-50 rounded-md bg-opacity-75">
+            <div className="absolute bottom-1 -left-2 p-1 px-2 text-sm bg-slate-50 rounded-md bg-opacity-75 scale-75 sm:bottom-2 sm:left-2 sm:scale-100">
               Bid to {data?.price}
             </div>
           )}

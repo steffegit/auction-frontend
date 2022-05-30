@@ -19,12 +19,12 @@ function Search() {
 
   return (
     <>
-      <div className="flex justify-between max-w-7xl mx-auto p-5 text-3xl">
-        <div>
+      <div className="flex max-w-7xl mx-auto p-5 text-3xl">
+        <div className="w-full">
           Search results for <strong>{data[0]?.brand}</strong>
         </div>
         <button
-          className="flex sm:hidden items-center p-2 bg-gray-200 hover:bg-gray-300 rounded-md transition-all"
+          className="flex sm:hidden items-center ml-4 justify-center p-2 bg-gray-200 hover:bg-gray-300  rounded-md transition-all"
           onClick={() => setGrid(!grid)}
         >
           {grid ? (
@@ -63,7 +63,7 @@ function Search() {
       <div
         className={`grid ${
           grid ? 'grid-cols-2' : 'grid-cols-1'
-        } max-w-7xl mx-auto p-5 gap-2 sm:grid-cols-3 md:grid-cols-5 sm:space-y-0 sm:gap-4`}
+        } max-w-7xl mx-auto p-5 gap-4 sm:grid-cols-3 lg:grid-cols-5`}
       >
         {data &&
           data?.map((item, idx) => (
