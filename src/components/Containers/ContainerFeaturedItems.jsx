@@ -38,14 +38,15 @@ function ContainerFeaturedItems({ data }) {
           data?.map((_, idx) => (
             <div key={data[idx].id}>
               <FeaturedItemCard
-                title={data[idx].title}
-                price={data[idx].price}
-                days={data[idx].days}
-                hours={data[idx].hours}
-                km={data[idx].km}
-                pic={data[idx].pic}
-                type={data[idx].type}
-                classic={data[idx].classic}
+                itemid={data[idx]?.id}
+                title={data[idx]?.title}
+                price={data[idx]?.price}
+                days={data[idx]?.days}
+                hours={data[idx]?.hours}
+                km={data[idx]?.km}
+                pic={data[idx]?.pic}
+                type={data[idx]?.type}
+                classic={data[idx]?.classic}
               />
             </div>
           ))}

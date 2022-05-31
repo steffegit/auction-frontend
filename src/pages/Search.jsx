@@ -19,7 +19,7 @@ function Search() {
 
   return (
     <>
-      <div className="flex max-w-7xl mx-auto p-5 text-3xl">
+      <div className="flex items-center max-w-7xl mx-auto p-3 py-5 text-3xl">
         <div className="w-full">
           Search results for <strong>{data[0]?.brand}</strong>
         </div>
@@ -63,11 +63,11 @@ function Search() {
       <div
         className={`grid ${
           grid ? 'grid-cols-2' : 'grid-cols-1'
-        } max-w-7xl mx-auto p-5 gap-4 sm:grid-cols-3 lg:grid-cols-5`}
+        } max-w-7xl mx-auto p-3 py-5 gap-4 sm:grid-cols-3 lg:grid-cols-5`}
       >
         {data &&
           data?.map((item, idx) => (
-            <SearchResultCard key={item?.id} data={item} />
+            <SearchResultCard key={item?.id} data={item} grid={grid} />
           ))}
       </div>
     </>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
-function SearchResultCard({ data }) {
+function SearchResultCard({ data, grid }) {
   const [hover, setHover] = useState(false)
 
   return (
     <div
-      className="w-full rounded-md space-y-2 mb-6"
+      className={`w-full rounded-md space-y-2 ${grid ? 'mb-4' : 'mb-2'}`}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -19,11 +19,11 @@ function SearchResultCard({ data }) {
             } transition-all`}
           />
           {data?.sold ? (
-            <div className="absolute bottom-1 -left-2 p-1 px-2 text-sm bg-black text-white rounded-md bg-opacity-75 scale-75 sm:bottom-2 sm:left-2 sm:scale-100">
+            <div className="absolute bottom-1 -left-2 p-1 px-2 text-sm bg-black text-white font-bold rounded-md bg-opacity-75 scale-75 sm:bottom-2 sm:left-2 sm:scale-100">
               Sold for {data?.price}
             </div>
           ) : (
-            <div className="absolute bottom-1 -left-2 p-1 px-2 text-sm bg-slate-50 rounded-md bg-opacity-75 scale-75 sm:bottom-2 sm:left-2 sm:scale-100">
+            <div className="absolute bottom-1 -left-2 p-1 px-2 text-sm font-bold bg-slate-50 rounded-md bg-opacity-75 scale-75 sm:bottom-2 sm:left-2 sm:scale-100">
               Bid to {data?.price}
             </div>
           )}
