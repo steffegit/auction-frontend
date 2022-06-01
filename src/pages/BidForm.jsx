@@ -1,7 +1,9 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 function BidForm() {
-  return <div>BidForm</div>
+  let { id } = useParams()
+  return <div>BidForm {id}</div>
 }
 
 export default BidForm

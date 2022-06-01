@@ -1,11 +1,9 @@
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 import { UserContext } from '../components/Context/UserContext'
 
 function Login() {
-  const { guestUser, activateGuest } = useContext(UserContext)
-  const navigate = useNavigate()
+  const { activateGuest } = useContext(UserContext)
 
   return (
     <div className="flex flex-col p-5 py-20 max-w-7xl mx-auto rounded-sm">
@@ -43,7 +41,6 @@ function Login() {
           className="hover:underline"
           onClick={() => {
             activateGuest()
-            navigate('/')
             // TODO: Make this prettier
             alert('You are now logged in as a guest')
           }}

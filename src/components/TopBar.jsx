@@ -1,15 +1,16 @@
 import React, { useState, Fragment } from 'react'
+import { useContext } from 'react'
 import { Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
 import SearchBar from './SearchBar'
 
 import { SiteContext } from './Context/Context'
-import { useContext } from 'react'
 
 function TopBar() {
   const navigate = useNavigate()
 
   const { allCars } = useContext(SiteContext)
+  const guestUser = localStorage.getItem('guest')
 
   const [showHambuger, setShowHambuger] = useState(false)
 
@@ -61,27 +62,54 @@ function TopBar() {
             </button>
           </div>
           <div>
-            <button
-              type="button"
-              className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 pl-0 sm:pl-4 rounded-md bg-secondary text-white hover:bg-blue-500 transition-all"
-              onClick={() => navigate('/login')}
-            >
-              <div className="hidden sm:block text-xl font-semibold">Login</div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
+            {!guestUser ? (
+              <button
+                type="button"
+                className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 pl-0 sm:pl-4 rounded-md bg-secondary text-white hover:bg-blue-500 transition-all"
+                onClick={() => navigate('/login')}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-            </button>
+                <div className="hidden sm:block text-xl font-semibold">
+                  Login
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 pl-0 sm:pl-4 rounded-md bg-slate-200 text-black hover:bg-gray-300 transition-all"
+              >
+                <div className="hidden sm:block text-xl font-semibold">
+                  Guest
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+              </button>
+            )}
           </div>
           {/* HAMBURGER */}
           <div className="flex items-center md:hidden">

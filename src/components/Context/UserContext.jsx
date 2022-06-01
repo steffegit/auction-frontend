@@ -1,16 +1,14 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext } from 'react'
 
 export const UserContext = createContext({})
 
 export const UserContextProvider = ({ children }) => {
-  const [guestUser, setGuestUser] = useState(false)
-
   const activateGuest = () => {
-    setGuestUser(true)
+    localStorage.setItem('guest', true)
   }
 
   return (
-    <UserContext.Provider value={{ guestUser, activateGuest }}>
+    <UserContext.Provider value={{ activateGuest }}>
       {children}
     </UserContext.Provider>
   )

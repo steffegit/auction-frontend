@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 
 import { SiteContext } from '../components/Context/Context'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import { Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -10,6 +10,7 @@ function Bid() {
   let { id } = useParams()
 
   const { getBidData, bid } = useContext(SiteContext)
+  const navigate = useNavigate()
 
   useEffect(() => {
     getBidData(id)
@@ -111,6 +112,9 @@ function Bid() {
                   type="button"
                   disabled={bid?.sold}
                   className="mt-10 p-3 w-full h-full bg-red-700 disabled:bg-green-700 text-white rounded-md font-medium hover:bg-red-800 transition-all"
+                  onClick={() => {
+                    navigate(`/bid/${id}`)
+                  }}
                 >
                   <div className="flex items-center justify-center space-x-2">
                     <svg
