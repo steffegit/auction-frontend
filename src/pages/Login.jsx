@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+import { UserContext } from '../components/Context/UserContext'
 
 function Login() {
+  const { guestUser, activateGuest } = useContext(UserContext)
+  const navigate = useNavigate()
+
   return (
     <div className="flex flex-col p-5 py-20 max-w-7xl mx-auto rounded-sm">
       <div className="text-3xl font-bold self-center mb-10">Login</div>
@@ -31,6 +37,19 @@ function Login() {
         >
           Forgot your password?
         </a>
+      </div>
+      <div className="flex justify-end">
+        <button
+          className="hover:underline"
+          onClick={() => {
+            activateGuest()
+            navigate('/')
+            // TODO: Make this prettier
+            alert('You are now logged in as a guest')
+          }}
+        >
+          Login as guest
+        </button>
       </div>
     </div>
   )
