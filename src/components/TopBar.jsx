@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, Fragment, useEffect } from 'react'
 import { useContext } from 'react'
 import { Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
@@ -18,7 +18,7 @@ function TopBar() {
   return (
     <div className="flex flex-col p-3 py-5 max-w-7xl mx-auto space-y-4">
       <div className="flex items-center sm:py-4">
-        <div className="text-2xl sm:text-3xl font-bold">
+        <div className="text-2xl sm:text-3xl font-bold mr-16">
           <a href="/">AuctionaX</a>
         </div>
         <div className="flex w-full justify-center">
