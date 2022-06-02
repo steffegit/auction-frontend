@@ -21,6 +21,7 @@ import './styles.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { SiteContextProvider } from './components/Context/Context'
 import { UserContextProvider } from './components/Context/UserContext'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
   return (
@@ -36,7 +37,14 @@ function App() {
             {/* and this is for form bid */}
             <Route path="/bid/:id" element={<BidForm />} />
             <Route path="/search" element={<Search />} />
-            <Route path="/login" element={<Login />} />
+            <Route
+              path="/login"
+              element={
+                <ProtectedRoute user={false}>
+                  <Login />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
           <Footer />

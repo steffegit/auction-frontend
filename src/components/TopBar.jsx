@@ -5,12 +5,13 @@ import { useNavigate } from 'react-router-dom'
 import SearchBar from './SearchBar'
 
 import { SiteContext } from './Context/Context'
-
+import { UserContext } from './Context/UserContext'
 function TopBar() {
   const navigate = useNavigate()
 
+  const { guest, logout } = useContext(UserContext)
+
   const { allCars } = useContext(SiteContext)
-  const guestUser = localStorage.getItem('guest')
 
   const [showHambuger, setShowHambuger] = useState(false)
 
@@ -62,7 +63,7 @@ function TopBar() {
             </button>
           </div>
           <div>
-            {!guestUser ? (
+            {!guest ? (
               <button
                 type="button"
                 className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 pl-0 sm:pl-4 rounded-md bg-secondary text-white hover:bg-blue-500 transition-all"
@@ -90,6 +91,9 @@ function TopBar() {
               <button
                 type="button"
                 className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 pl-0 sm:pl-4 rounded-md bg-slate-200 text-black hover:bg-gray-300 transition-all"
+                onClick={() => {
+                  logout()
+                }}
               >
                 <div className="hidden sm:block text-xl font-semibold">
                   Guest

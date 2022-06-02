@@ -1,6 +1,7 @@
 # TODO:
 
 - Make the guest user login alert prettier.
+- Make the guest state persist
 
 <br>
 
