@@ -13,18 +13,25 @@ function BidForm() {
   let { id } = useParams()
   const [page, setPage] = useState(0)
 
+  const [formData, setFormData] = useState({
+    pickUp: false,
+    financing: false,
+    bidAmount: 0,
+    depositFee: false,
+  })
+
   const PageDisplay = () => {
     switch (page) {
       case 0:
-        return <PickUp />
+        return <PickUp formData={formData} setFormData={setFormData} />
       case 1:
-        return <Financing />
+        return <Financing formData={formData} setFormData={setFormData} />
       case 2:
-        return <BidAmount />
+        return <BidAmount formData={formData} setFormData={setFormData} />
       case 3:
-        return <Deposit />
+        return <Deposit formData={formData} setFormData={setFormData} />
       case 4:
-        return <Success />
+        return <Success formData={formData} setFormData={setFormData} />
       default:
         return <PickUp />
     }
@@ -36,7 +43,7 @@ function BidForm() {
       <div className="flex space-x-10 mx-auto">
         <button
           className="p-2 bg-red-600 hover:bg-red-700 text-white border rounded-full px-4"
-          disabled={page == 0}
+          disabled={page === 0}
           onClick={() => {
             setPage((currentPage) => currentPage - 1)
           }}
@@ -45,7 +52,7 @@ function BidForm() {
         </button>
         <button
           className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-4"
-          disabled={page == steps.length - 1}
+          disabled={page === steps.length - 1}
           onClick={() => {
             setPage((currentPage) => currentPage + 1)
           }}

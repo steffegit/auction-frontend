@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Financing() {
+function Financing({ formData, setFormData }) {
   return (
     <div>
       <div>
@@ -8,9 +8,23 @@ function Financing() {
         full. Are you fine with that?
       </div>
       <fieldset>
-        <input type="radio" id="yesbtn" name="financing" value={1} checked />
+        <input
+          type="radio"
+          id="yesbtn"
+          name="financing"
+          value={true}
+          onClick={() => setFormData({ ...formData, financing: true })}
+        />
+
         <label for="yesbtn">Yes</label>
-        <input type="radio" id="nobtn" name="financing" value={0} />
+        <input
+          type="radio"
+          id="nobtn"
+          name="financing"
+          value={false}
+          onClick={() => setFormData({ ...formData, financing: false })}
+          checked
+        />
         <label for="nobtn">No</label>
       </fieldset>
     </div>

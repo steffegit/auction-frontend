@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BidAmount() {
+function BidAmount({ formData, setFormData }) {
   return (
     <div>
       <div>Current top bid: 0.000$</div>
