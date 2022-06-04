@@ -43,10 +43,10 @@ function BidForm() {
     }
   }
   return (
-    <div className="flex flex-col max-w-3xl mx-auto scroll-smooth p-4 pb-16 sm:p-16 pt-4 bg-bgColor rounded-md">
-      <FormSteps page={page} setPage={setPage} />
+    <div className="flex flex-col h-[60vh] max-w-3xl mx-auto scroll-smooth p-4 pb-16 sm:p-16 pt-4 bg-bgColor sm:rounded-md">
       {page !== steps.length - 1 ? (
         <>
+          <FormSteps page={page} setPage={setPage} />
           <div>{PageDisplay()}</div>
           <div className="flex w-full justify-center space-x-10">
             <button
@@ -83,10 +83,15 @@ function BidForm() {
           </div>
         </>
       ) : (
-        <>
+        <div className="flex flex-col max-w-3xl justify-center items-center scroll-smooth p-4 pb-16 sm:p-16 pt-4 bg-bgColor sm:rounded-md">
           <div>{PageDisplay()}</div>
-          <a>Go Home</a>
-        </>
+          <a
+            href="/"
+            className="mt-10 px-4 py-2 font-semibold hover:text-gray-700 transition-all"
+          >
+            <div>Go Home</div>
+          </a>
+        </div>
       )}
     </div>
   )
