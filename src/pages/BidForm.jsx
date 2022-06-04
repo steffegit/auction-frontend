@@ -7,6 +7,8 @@ import Financing from '../components/Form/FormPages/Financing'
 import PickUp from '../components/Form/FormPages/PickUp'
 import Success from '../components/Form/FormPages/Success'
 
+import FormSteps from '../components/Form/FormSteps'
+
 const steps = ['Pick Up', 'Financing', 'Bid Amount', 'Deposit Fee', 'Success']
 
 function BidForm() {
@@ -20,9 +22,9 @@ function BidForm() {
     depositFee: false,
   })
 
-  useEffect(() => {
-    console.log(formData)
-  }, [formData])
+  // useEffect(() => {
+  //   console.log(formData)
+  // }, [formData])
 
   const PageDisplay = () => {
     switch (page) {
@@ -41,12 +43,12 @@ function BidForm() {
     }
   }
   return (
-    <div className="flex flex-col max-w-7xl mx-auto scroll-smooth pb-5">
-      <div>Current: {steps[page]}</div>
+    <div className="flex flex-col max-w-3xl mx-auto scroll-smooth p-4 pb-16 sm:p-16 pt-4 bg-bgColor rounded-md">
+      <FormSteps page={page} setPage={setPage} />
       {page !== steps.length - 1 ? (
         <>
           <div>{PageDisplay()}</div>
-          <div className="flex space-x-10 mx-auto">
+          <div className="flex w-full justify-center space-x-10">
             <button
               className="p-2 bg-red-600 hover:bg-red-700 text-white border rounded-full px-8"
               disabled={page === 0}
@@ -59,6 +61,7 @@ function BidForm() {
             {page === steps.length - 2 ? (
               <button
                 className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-8"
+                disabled={!formData.depositFee}
                 onClick={() => {
                   alert('Bid placed.')
                   setPage((currentPage) => currentPage + 1)

@@ -2,9 +2,13 @@ import React from 'react'
 
 function Deposit({ formData, setFormData }) {
   return (
-    <div className="flex flex-col items-center justify-center mb-10">
-      <div>There is a 200$ deposit fee. Are you fine with that?</div>
-      <fieldset className="flex items-center space-x-10">
+    <div className="flex flex-col items-center justify-center mb-10 space-y-4">
+      <div className="text-center">
+        <div>There is a 200$ deposit fee.</div>
+        <div>Are you fine with that?</div>
+      </div>
+
+      <fieldset className="flex items-center space-x-16">
         <div className="flex space-x-1 items-center">
           <input
             type="radio"

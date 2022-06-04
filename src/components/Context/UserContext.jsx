@@ -6,9 +6,11 @@ export const UserContextProvider = ({ children }) => {
   const [guest, setGuest] = useState(false)
 
   useEffect(() => {
-    let temp = localStorage.getItem('guest')
-    setGuest(temp)
-    console.log(temp)
+    if (localStorage.getItem('guest')) {
+      let temp = localStorage.getItem('guest')
+      setGuest(temp)
+      console.log(temp)
+    }
   }, [])
 
   const activateGuest = () => {
