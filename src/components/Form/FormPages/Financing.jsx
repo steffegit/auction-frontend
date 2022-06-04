@@ -16,16 +16,16 @@ function Financing({ formData, setFormData }) {
           onClick={() => setFormData({ ...formData, financing: true })}
         />
 
-        <label for="yesbtn">Yes</label>
+        <label htmlFor="yesbtn">Yes</label>
         <input
           type="radio"
           id="nobtn"
           name="financing"
           value={false}
           onClick={() => setFormData({ ...formData, financing: false })}
-          checked
+          defaultChecked
         />
-        <label for="nobtn">No</label>
+        <label htmlFor="nobtn">No</label>
       </fieldset>
     </div>
   )

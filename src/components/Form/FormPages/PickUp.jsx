@@ -12,16 +12,16 @@ function PickUp({ formData, setFormData }) {
           value={true}
           onClick={() => setFormData({ ...formData, pickUp: true })}
         />
-        <label for="yesbtn">Yes</label>
+        <label htmlFor="yesbtn">Yes</label>
         <input
           type="radio"
           id="nobtn"
           name="pickup"
           value={false}
           onClick={() => setFormData({ ...formData, pickUp: false })}
-          checked
+          defaultChecked
         />
-        <label for="nobtn">No</label>
+        <label htmlFor="nobtn">No</label>
       </fieldset>
     </div>
   )

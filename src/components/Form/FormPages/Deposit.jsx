@@ -12,16 +12,16 @@ function Deposit({ formData, setFormData }) {
           value={true}
           onClick={() => setFormData({ ...formData, depositFee: true })}
         />
-        <label for="yesbtn">Yes</label>
+        <label htmlFor="yesbtn">Yes</label>
         <input
           type="radio"
           id="nobtn"
           name="deposit"
           value={false}
           onClick={() => setFormData({ ...formData, depositFee: false })}
-          checked
+          defaultChecked
         />
-        <label for="nobtn">No</label>
+        <label htmlFor="nobtn">No</label>
       </fieldset>
     </div>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import BidAmount from '../components/Form/FormPages/BidAmount'
@@ -19,6 +19,10 @@ function BidForm() {
     bidAmount: 0,
     depositFee: false,
   })
+
+  useEffect(() => {
+    console.log(formData)
+  }, [formData])
 
   const PageDisplay = () => {
     switch (page) {
@@ -50,15 +54,21 @@ function BidForm() {
         >
           Prev
         </button>
-        <button
-          className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-4"
-          disabled={page === steps.length - 1}
-          onClick={() => {
-            setPage((currentPage) => currentPage + 1)
-          }}
-        >
-          Next
-        </button>
+        {page === steps.length - 1 ? (
+          <button className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-4">
+            Submit
+          </button>
+        ) : (
+          <button
+            className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-4"
+            disabled={page === steps.length - 1}
+            onClick={() => {
+              setPage((currentPage) => currentPage + 1)
+            }}
+          >
+            Next
+          </button>
+        )}
       </div>
     </div>
   )
