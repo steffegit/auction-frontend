@@ -43,33 +43,48 @@ function BidForm() {
   return (
     <div className="flex flex-col max-w-7xl mx-auto scroll-smooth pb-5">
       <div>Current: {steps[page]}</div>
-      <div>{PageDisplay()}</div>
-      <div className="flex space-x-10 mx-auto">
-        <button
-          className="p-2 bg-red-600 hover:bg-red-700 text-white border rounded-full px-4"
-          disabled={page === 0}
-          onClick={() => {
-            setPage((currentPage) => currentPage - 1)
-          }}
-        >
-          Prev
-        </button>
-        {page === steps.length - 1 ? (
-          <button className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-4">
-            Submit
-          </button>
-        ) : (
-          <button
-            className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-4"
-            disabled={page === steps.length - 1}
-            onClick={() => {
-              setPage((currentPage) => currentPage + 1)
-            }}
-          >
-            Next
-          </button>
-        )}
-      </div>
+      {page !== steps.length - 1 ? (
+        <>
+          <div>{PageDisplay()}</div>
+          <div className="flex space-x-10 mx-auto">
+            <button
+              className="p-2 bg-red-600 hover:bg-red-700 text-white border rounded-full px-8"
+              disabled={page === 0}
+              onClick={() => {
+                setPage((currentPage) => currentPage - 1)
+              }}
+            >
+              Prev
+            </button>
+            {page === steps.length - 2 ? (
+              <button
+                className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-8"
+                onClick={() => {
+                  alert('Bid placed.')
+                  setPage((currentPage) => currentPage + 1)
+                }}
+              >
+                Submit
+              </button>
+            ) : (
+              <button
+                className="p-2 bg-green-500 hover:bg-green-600 text-white border rounded-full px-8"
+                disabled={page === steps.length - 2}
+                onClick={() => {
+                  setPage((currentPage) => currentPage + 1)
+                }}
+              >
+                Next
+              </button>
+            )}
+          </div>
+        </>
+      ) : (
+        <>
+          <div>{PageDisplay()}</div>
+          <a>Go Home</a>
+        </>
+      )}
     </div>
   )
 }
