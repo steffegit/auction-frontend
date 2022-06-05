@@ -26,11 +26,8 @@ import {
 } from './components/Context/UserContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import ProtectedUserRoute from './components/ProtectedUserRoute'
-import { useContext } from 'react'
 
 function App() {
-  const { guest } = useContext(UserContext)
-
   return (
     <SiteContextProvider>
       <UserContextProvider>
@@ -45,7 +42,9 @@ function App() {
             <Route
               path="/bid/:id"
               element={
-                <ProtectedUserRoute user={guest}>
+                <ProtectedUserRoute
+                  user={JSON.parse(localStorage.getItem('guest'))}
+                >
                   <BidForm />
                 </ProtectedUserRoute>
               }

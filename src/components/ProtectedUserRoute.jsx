@@ -1,7 +1,8 @@
+import { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 
 const ProtectedUserRoute = ({ user, children }) => {
-  if (user) {
+  if (!user) {
     return <Navigate to="/login" />
   }
 
