@@ -14,7 +14,7 @@ function Bid() {
 
   useEffect(() => {
     getBidData(id)
-  }, [id])
+  })
 
   return (
     <>
@@ -302,6 +302,9 @@ function Bid() {
                   type="button"
                   disabled={bid?.sold}
                   className="mt-10 p-3 w-full h-full bg-red-700 disabled:bg-green-700 text-white rounded-md font-medium hover:bg-red-800 transition-all"
+                  onClick={() => {
+                    navigate(`/bid/${id}`)
+                  }}
                 >
                   <div className="flex items-center justify-center space-x-2">
                     <svg

@@ -20,10 +20,7 @@ import './styles.css'
 // OTHER
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { SiteContextProvider } from './components/Context/Context'
-import {
-  UserContext,
-  UserContextProvider,
-} from './components/Context/UserContext'
+import { UserContextProvider } from './components/Context/UserContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import ProtectedUserRoute from './components/ProtectedUserRoute'
 

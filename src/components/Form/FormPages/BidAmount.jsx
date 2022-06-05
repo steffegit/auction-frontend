@@ -12,6 +12,7 @@ function BidAmount({ formData, setFormData }) {
         min={0}
         name="bidamount"
         className="bg-bgColor outline-none p-2 border border-slate-300 rounded-md focus:border-sky-500 font-medium"
+        value={formData.bidAmount}
         onChange={(event) =>
           setFormData({ ...formData, bidAmount: event.target.value })
         }
