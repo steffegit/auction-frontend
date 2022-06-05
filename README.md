@@ -1,7 +1,7 @@
 # TODO:
 
-- Make the guest user login alert prettier.
 - Make the guest state persist
+- Make the BidForm get accessed if only logged in, otherwise send to login page and then return to BidForm.
 
 <br>
 

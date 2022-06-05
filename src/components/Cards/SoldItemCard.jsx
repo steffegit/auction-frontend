@@ -12,7 +12,7 @@ function SoldItem({
   pic,
 }) {
   return (
-    <div className="flex flex-col bg-bgColor border border-gray-300 rounded-lg shadow-md p-5 space-y-4 hover:scale-105 transition-all">
+    <div className="flex min-h-[225px] flex-col bg-bgColor border border-gray-300 rounded-lg shadow-md p-5 space-y-4 hover:scale-105 transition-all">
       <div className="flex justify-center items-center pt-1">
         <a href={`/bids/${itemid}`} className="relative">
           <img

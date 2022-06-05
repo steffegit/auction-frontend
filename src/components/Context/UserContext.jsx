@@ -6,21 +6,22 @@ export const UserContextProvider = ({ children }) => {
   const [guest, setGuest] = useState(false)
 
   useEffect(() => {
-    if (localStorage.getItem('guest')) {
-      let temp = localStorage.getItem('guest')
-      setGuest(temp)
-      console.log(temp)
+    const fetchGuest = () => {
+      return JSON.parse(localStorage.getItem('guest'))
     }
+
+    const temp = fetchGuest()
+    setGuest(temp)
   }, [])
 
   const activateGuest = () => {
-    setGuest(true)
+    setGuest(1)
     localStorage.removeItem('guest')
     localStorage.setItem('guest', true)
   }
 
   const logout = () => {
-    setGuest(false)
+    setGuest(0)
     localStorage.removeItem('guest')
     localStorage.setItem('guest', false)
   }

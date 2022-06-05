@@ -150,7 +150,6 @@ function Bid() {
               </div>
             </div>
           </div>
-          {/* INSTEAD OF LOCALIZATION MAYBE INFO ABOUT THE SELLER  */}
           <div className="w-full h-full space-y-8 bg-white p-6 rounded-md">
             <div className="font-bold uppercase">About Seller</div>
             <div className="flex space-x-4 items-start">
