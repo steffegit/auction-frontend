@@ -90,7 +90,7 @@ function Bid() {
                 {bid?.title}
               </div>
               <a
-                href={`#view${bid?.brand}`}
+                href={`/search?q=${bid?.brand}`}
                 className="text-lg font-light hover:underline"
               >
                 {bid?.brand} category
