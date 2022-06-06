@@ -23,7 +23,7 @@ function TopBar() {
         </div>
         <div className="flex w-full justify-center">
           <div className="flex items-center space-x-2">
-            <div className="hidden md:flex space-x-8 justify-around items-end space-y-2 text-xl pb-2 mr-4">
+            <div className="hidden lg:flex space-x-8 justify-around items-end space-y-2 text-xl pb-2 mr-4">
               <a href="#categories" className="hover:underline">
                 Categories
               </a>
@@ -116,7 +116,7 @@ function TopBar() {
             )}
           </div>
           {/* HAMBURGER */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center lg:hidden">
             <button
               type="button"
               onClick={() => setShowHambuger(true)}

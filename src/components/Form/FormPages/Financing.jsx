@@ -17,7 +17,8 @@ function Financing({ formData, setFormData }) {
             id="yesbtn"
             name="financing"
             value={true}
-            onClick={() => setFormData({ ...formData, financing: true })}
+            onChange={() => setFormData({ ...formData, financing: true })}
+            checked={formData.financing === true}
           />
 
           <label htmlFor="yesbtn">Yes</label>
@@ -28,8 +29,8 @@ function Financing({ formData, setFormData }) {
             id="nobtn"
             name="financing"
             value={false}
-            onClick={() => setFormData({ ...formData, financing: false })}
-            defaultChecked
+            onChange={() => setFormData({ ...formData, financing: false })}
+            checked={formData.financing === false}
           />
           <label htmlFor="nobtn">No</label>
         </div>

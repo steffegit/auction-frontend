@@ -15,7 +15,8 @@ function Deposit({ formData, setFormData }) {
             id="yesbtn"
             name="deposit"
             value={true}
-            onClick={() => setFormData({ ...formData, depositFee: true })}
+            onChange={() => setFormData({ ...formData, depositFee: true })}
+            checked={formData.depositFee === true}
           />
           <label htmlFor="yesbtn">Yes</label>
         </div>
@@ -25,8 +26,8 @@ function Deposit({ formData, setFormData }) {
             id="nobtn"
             name="deposit"
             value={false}
-            onClick={() => setFormData({ ...formData, depositFee: false })}
-            defaultChecked
+            onChange={() => setFormData({ ...formData, depositFee: false })}
+            checked={formData.depositFee === false}
           />
           <label htmlFor="nobtn">No</label>
         </div>

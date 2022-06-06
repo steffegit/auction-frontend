@@ -13,7 +13,8 @@ function PickUp({ formData, setFormData }) {
             id="yesbtn"
             name="pickup"
             value={true}
-            onClick={() => setFormData({ ...formData, pickUp: true })}
+            onChange={() => setFormData({ ...formData, pickUp: true })}
+            checked={formData.pickUp === true}
           />
           <label htmlFor="yesbtn">Yes</label>
         </div>
@@ -23,8 +24,8 @@ function PickUp({ formData, setFormData }) {
             id="nobtn"
             name="pickup"
             value={false}
-            onClick={() => setFormData({ ...formData, pickUp: false })}
-            defaultChecked
+            onChange={() => setFormData({ ...formData, pickUp: false })}
+            checked={formData.pickUp === false}
           />
           <label htmlFor="nobtn">No</label>
         </div>
