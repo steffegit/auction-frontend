@@ -1,9 +1,13 @@
-# TODO:
+# **Car Bidding Auction Website**
 
-- Make the guest state persist
-- Make the BidForm get accessed if only logged in, otherwise send to login page and then return to BidForm.
+### This project was made with the help and backend of [moedeera](https://github.com/moedeera)
+
+### <em>Project screenshots coming soon...</em>
 
 <br>
+<br>
+
+# TODO:
 
 # DONE:
 
@@ -21,3 +25,5 @@
 - Put Max-width on `See All Listed Items`
 - make OnCLick on the card, not only the button.
 - Work on the bidding page (should have an Image Carousel, and info on the right - name, pricing - and bottom - description)
+- Make the guest state persist
+- Make the BidForm get accessed if only logged in, otherwise send to login page and then return to BidForm. (somewhat done)
