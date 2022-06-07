@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, {useState, Fragment, useEffect} from 'react'
 import { useContext } from 'react'
 import { Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
@@ -9,11 +9,15 @@ import { UserContext } from './Context/UserContext'
 function TopBar() {
   const navigate = useNavigate()
 
-  const { guest, logout } = useContext(UserContext)
+  const { guest, logout, users } = useContext(UserContext)
 
   const { allCars } = useContext(SiteContext)
 
   const [showHambuger, setShowHambuger] = useState(false)
+
+  useEffect(()=>{
+    console.log(users)
+  })
 
   return (
     <div className="flex flex-col p-3 py-5 max-w-7xl mx-auto space-y-4">
