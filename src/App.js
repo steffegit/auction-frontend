@@ -6,6 +6,7 @@ import Bid from './pages/Bid'
 import Login from './pages/Login'
 import Search from './pages/Search'
 import BidForm from './pages/BidForm'
+import Profile from './pages/Profile'
 
 // COMPONENTS
 import TopBar from './components/TopBar'
@@ -50,9 +51,19 @@ function App() {
             <Route
               path="/login"
               element={
-                <ProtectedRoute user={false}>
+                <ProtectedRoute user={true}>
                   <Login />
                 </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedUserRoute
+                  user={JSON.parse(localStorage.getItem('guest'))}
+                >
+                  <Profile />
+                </ProtectedUserRoute>
               }
             />
             <Route path="/*" element={<NotFoundPage />} />
