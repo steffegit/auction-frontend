@@ -23,16 +23,14 @@ export const UserContextProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('guest', guest)
-  }, [guest])
 
-  useEffect(() => {
     const fetchData = async () => {
       const data = await fetchUsers()
 
       setUsers(data)
     }
-    fetchData().catch(console.error)
-  }, [])
+    if (guest) fetchData().catch(console.error)
+  }, [guest])
 
   const activateGuest = () => {
     localStorage.setItem('guest', true)
