@@ -92,12 +92,9 @@ function TopBar() {
                 </svg>
               </button>
             ) : (
-              <button
-                type="button"
+              <a
                 className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 pl-0 sm:pl-4 rounded-md bg-slate-200 text-black hover:bg-gray-300 transition-all"
-                onClick={() => {
-                  logout()
-                }}
+                href={"/profile"}
               >
                 <div className="hidden sm:block text-xl font-semibold">
                   Guest
@@ -116,7 +113,7 @@ function TopBar() {
                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                   />
                 </svg>
-              </button>
+              </a>
             )}
           </div>
           {/* HAMBURGER */}
