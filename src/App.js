@@ -51,7 +51,9 @@ function App() {
             <Route
               path="/login"
               element={
-                <ProtectedRoute user={true}>
+                <ProtectedRoute
+                  user={JSON.parse(localStorage.getItem('guest'))}
+                >
                   <Login />
                 </ProtectedRoute>
               }

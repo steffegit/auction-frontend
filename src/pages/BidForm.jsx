@@ -43,7 +43,7 @@ function BidForm() {
     }
   }
   return (
-    <div className="flex flex-col h-[60vh] max-w-3xl mx-auto scroll-smooth p-4 pb-16 sm:p-16 pt-4 bg-bgColor sm:rounded-md">
+    <div className="flex flex-col h-[60vh] max-w-3xl mx-auto scroll-smooth p-4 pb-[400px] sm:p-16 pt-4 bg-bgColor sm:rounded-md">
       {page !== steps.length - 1 ? (
         <>
           <FormSteps page={page} setPage={setPage} />

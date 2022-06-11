@@ -1,4 +1,4 @@
-import React, {useState, Fragment, useEffect} from 'react'
+import React, { useState, Fragment, useEffect } from 'react'
 import { useContext } from 'react'
 import { Transition } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
@@ -15,7 +15,7 @@ function TopBar() {
 
   const [showHambuger, setShowHambuger] = useState(false)
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(users)
   })
 
@@ -94,7 +94,7 @@ function TopBar() {
             ) : (
               <a
                 className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 pl-0 sm:pl-4 rounded-md bg-slate-200 text-black hover:bg-gray-300 transition-all"
-                href={"/profile"}
+                href={'/profile'}
               >
                 <div className="hidden sm:block text-xl font-semibold">
                   Guest
