@@ -20,6 +20,7 @@ export const UserContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem('guest')) === true
   )
   const [users, setUsers] = useState({})
+  const [guestInfo, setGuestInfo] = useState(undefined)
 
   useEffect(() => {
     localStorage.setItem('guest', guest)
@@ -28,8 +29,11 @@ export const UserContextProvider = ({ children }) => {
       const data = await fetchUsers()
 
       setUsers(data)
+      setGuestInfo(data['guest'])
     }
-    if (guest) fetchData().catch(console.error)
+    if (guest) {
+      fetchData().catch(console.error)
+    }
   }, [guest])
 
   const activateGuest = () => {
@@ -43,7 +47,9 @@ export const UserContextProvider = ({ children }) => {
   }
 
   return (
-    <UserContext.Provider value={{ guest, activateGuest, logout, users }}>
+    <UserContext.Provider
+      value={{ guest, activateGuest, logout, users, guestInfo }}
+    >
       {children}
     </UserContext.Provider>
   )
