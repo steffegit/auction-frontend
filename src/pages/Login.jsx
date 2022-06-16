@@ -26,7 +26,7 @@ function Login() {
         </div>
         <button
           type="submit"
-          className="py-3 bg-secondary font-medium rounded-md text-white hover:bg-primary"
+          className="py-3 bg-secondary font-medium rounded-md text-white hover:bg-primary transition-all"
         >
           Login
         </button>
@@ -34,14 +34,19 @@ function Login() {
       <div className="flex mt-2 items-center justify-center">
         <a
           href="#forgot"
-          className="hover:underline text-gray-400 hover:text-black"
+          className="hover:underline text-gray-400 hover:text-black transition-all duration-75"
         >
           Forgot your password?
         </a>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-center mt-10">
+        Don't have an account?&nbsp;
+        <a href="/register" className="text-blue-500 font-bold hover:underline">
+          Register
+        </a>
+        &nbsp;or&nbsp;
         <button
-          className="hover:underline"
+          className="hover:underline text-green-700 font-bold"
           onClick={() => {
             activateGuest()
             // TODO: Make this prettier
@@ -49,7 +54,7 @@ function Login() {
             navigate('/', { replace: true })
           }}
         >
-          Login as guest
+          Login as Guest
         </button>
       </div>
     </div>
