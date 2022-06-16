@@ -4,6 +4,7 @@ import Post from './pages/Post'
 import NotFoundPage from './pages/NotFoundPage'
 import Bid from './pages/Bid'
 import Login from './pages/Login'
+import Register from './pages/Register'
 import Search from './pages/Search'
 import BidForm from './pages/BidForm'
 import Profile from './pages/Profile'
@@ -55,6 +56,16 @@ function App() {
                   user={JSON.parse(localStorage.getItem('guest'))}
                 >
                   <Login />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <ProtectedRoute
+                  user={JSON.parse(localStorage.getItem('guest'))}
+                >
+                  <Register />
                 </ProtectedRoute>
               }
             />
