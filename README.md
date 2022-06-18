@@ -2,12 +2,14 @@
 
 ### This project was made with the help and backend of [moedeera](https://github.com/moedeera)
 
-### <em>Project screenshots coming soon...</em>
+### <em>Project screenshots are coming soon...</em>
 
 <br>
 <br>
 
 # TODO:
+- Work on the Post Page design and functionality.
+- Update the UserContext so it will fetch the guest profile(if necessary) using the already existing token(from localStorage)
 
 # DONE:
 
