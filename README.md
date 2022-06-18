@@ -10,6 +10,8 @@
 # TODO:
 - Work on the Post Page design and functionality.
 - Update the UserContext so it will fetch the guest profile(if necessary) using the already existing token(from localStorage)
+- FIX bug in profile (it doesnt show the profile)
+- Refresh after logout
 
 # DONE:
 
