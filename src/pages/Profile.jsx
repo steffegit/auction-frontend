@@ -1,11 +1,8 @@
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../components/Context/UserContext'
 
 function Profile() {
   const { guest, guestInfo, logout } = useContext(UserContext)
-
-  const navigate = useNavigate()
 
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-start sm:items-start space-y-8 sm:space-y-0 max-w-7xl sm:mx-auto p-5 sm:space-x-10 bg-bgColor m-5 sm:m-10 rounded-md">
@@ -45,15 +42,15 @@ function Profile() {
         ) : (
           <div>Not selling anything</div>
         )}
-        <button
+        <a
+          href="/"
           className="mt-10 px-14 py-2 rounded-lg bg-black text-white hover:bg-gray-900 hover:scale-105 transition-all sm:justify-end sm:self-end"
           onClick={() => {
             logout()
-            navigate('/')
           }}
         >
           Logout
-        </button>
+        </a>
       </div>
     </div>
   )

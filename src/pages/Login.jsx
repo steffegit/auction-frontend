@@ -39,23 +39,28 @@ function Login() {
           Forgot your password?
         </a>
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex flex-col sm:flex-row text-center justify-center mt-10">
         Don't have an account?&nbsp;
-        <a href="/register" className="text-blue-500 font-bold hover:underline">
-          Register
-        </a>
-        &nbsp;or&nbsp;
-        <button
-          className="hover:underline text-green-700 font-bold"
-          onClick={() => {
-            activateGuest()
-            // TODO: Make this prettier
-            alert('You are now logged in as a guest')
-            navigate('/', { replace: true })
-          }}
-        >
-          Login as Guest
-        </button>
+        <div>
+          <a
+            href="/register"
+            className="text-blue-500 font-bold hover:underline"
+          >
+            Register
+          </a>
+          &nbsp;or&nbsp;
+          <button
+            className="hover:underline text-green-700 font-bold"
+            onClick={() => {
+              activateGuest()
+              // TODO: Make this prettier
+              alert('You are now logged in as a guest')
+              navigate('/', { replace: true })
+            }}
+          >
+            Login as Guest
+          </button>
+        </div>
       </div>
     </div>
   )
