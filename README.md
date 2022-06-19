@@ -9,8 +9,6 @@
 
 # TODO:
 - Work on the Post Page design and functionality.
-- Update the UserContext so it will fetch the guest profile(if necessary) using the already existing token(from localStorage)
-- FIX bug in profile (it doesnt show the profile)
 - Refresh after logout
 
 # DONE:
@@ -31,3 +29,5 @@
 - Work on the bidding page (should have an Image Carousel, and info on the right - name, pricing - and bottom - description)
 - Make the guest state persist
 - Make the BidForm get accessed if only logged in, otherwise send to login page and then return to BidForm. (somewhat done)
+- Update the UserContext so it will fetch the guest profile(if necessary) using the already existing token(from localStorage)
+- FIX bug in profile (it doesnt show the profile)

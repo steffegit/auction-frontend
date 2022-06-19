@@ -41,7 +41,8 @@ export const UserContextProvider = ({ children }) => {
         const data = await fetchUserByToken(token)
 
         setUsers(data)
-        setGuestInfo(data['guest'])
+        setGuestInfo(data)
+        console.log(data)
       }
       if (guest) {
         fetchData().catch(console.error)
@@ -59,7 +60,7 @@ export const UserContextProvider = ({ children }) => {
         fetchData().catch(console.error)
       }
     }
-  }, [])
+  }, [guest, token])
 
   const activateGuest = () => {
     localStorage.setItem('guest', true)

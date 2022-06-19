@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../components/Context/UserContext'
 
 function Profile() {
-  const { guestInfo, logout } = useContext(UserContext)
+  const { guest, guestInfo, logout } = useContext(UserContext)
 
   const navigate = useNavigate()
 
@@ -26,7 +26,7 @@ function Profile() {
         className="w-full h-full flex flex-col justify-center items-center sm:justify-start sm:items-start text-center sm:text-left"
       >
         <div className="flex items-end space-x-2">
-          <div className="font-bold text-3xl">{guestInfo?.name}</div>
+          <div className="font-bold text-3xl">{guest ? 'Guest' : null}</div>
           <div className="text-lg italic">({guestInfo?.username})</div>
         </div>
         <div>
