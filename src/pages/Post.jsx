@@ -1,18 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { SiteContext } from '../components/Context/Context'
-import Dropdown from 'react-dropdown'
-import 'react-dropdown/style.css'
 
 function Post() {
   const { brands } = useContext(SiteContext)
-  const [category, setCategory] = useState(undefined)
-
-  useEffect(() => {
-    console.log(brands)
-  })
 
   return (
-    <div className="max-w-xl mx-auto py-20 flex flex-col items-center justify-start p-3 sm:p-0">
+    <div className="max-w-3xl mx-auto p-3 py-20 flex flex-col items-center justify-start sm:p-12 sm:py-20 rounded-md bg-white">
       <div className="text-3xl font-bold mb-10">Post a Bid</div>
       <form className="flex flex-col space-y-14 w-full">
         <div className="space-y-4 w-full">
@@ -27,22 +20,34 @@ function Post() {
               />
             </label>
           </div>
-          <div className="flex flex-col">
-            <label htmlFor="category" aria-required>
-              Category*
-            </label>
-            {/* MAYBE USE SOMETHING ELSE HERE */}
-            <select
-              id="category"
-              name="category"
-              className="w-2/4 p-3 rounded-md border bg-white border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
-            >
-              {brands?.map((item, idx) => (
-                <option value={item} className="m-2">
-                  {item}
-                </option>
-              ))}
-            </select>
+          <div className="flex space-x-4">
+            <div className="flex flex-col w-2/4">
+              <label htmlFor="category" aria-required>
+                Category/Brand*
+              </label>
+              {/* MAYBE USE SOMETHING ELSE HERE */}
+              <select
+                id="category"
+                name="category"
+                className="p-3 rounded-md border bg-white border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
+              >
+                {brands?.map((item, idx) => (
+                  <option value={item} className="m-2">
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="w-2/4">
+              <label htmlFor="year">Make Year*</label>
+              <input
+                type="number"
+                min={0}
+                name="year"
+                placeholder="ex: 2020"
+                className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
+              />
+            </div>
           </div>
           <div>
             <label htmlFor="description" aria-required>
