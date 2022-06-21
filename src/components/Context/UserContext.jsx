@@ -1,9 +1,11 @@
 import axios from 'axios'
 import React, { createContext, useEffect, useState } from 'react'
+import qs from 'qs'
 
 export const UserContext = createContext({})
 
 const usersUrl = 'https://auction-website89.herokuapp.com/users'
+const registerUrl = 'https://auction-website89.herokuapp.com/users/register'
 
 const fetchUsers = async () => {
   try {
@@ -25,6 +27,23 @@ const fetchUserByToken = async (token) => {
   }
 }
 
+const registerUser = async (name, email, password) => {
+  try {
+    let postData = {
+      name: name,
+      email: email,
+      password: password,
+    }
+    const res = await axios.post(registerUrl, qs.stringify(postData), {
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    })
+    return res.data
+  } catch (error) {
+    console.log(error)
+    return null
+  }
+}
+
 export const UserContextProvider = ({ children }) => {
   const [guest, setGuest] = useState(
     JSON.parse(localStorage.getItem('guest')) === true
@@ -32,6 +51,11 @@ export const UserContextProvider = ({ children }) => {
   const [users, setUsers] = useState({})
   const [guestInfo, setGuestInfo] = useState(undefined)
   const [token, setToken] = useState(localStorage.getItem('token'))
+
+  const createRegisterUser = async (info) => {
+    const data = await registerUser(info.name, info.email, info.password)
+    console.log(data)
+  }
 
   useEffect(() => {
     localStorage.setItem('guest', guest)
@@ -74,7 +98,14 @@ export const UserContextProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ guest, activateGuest, logout, users, guestInfo }}
+      value={{
+        guest,
+        activateGuest,
+        logout,
+        users,
+        guestInfo,
+        createRegisterUser,
+      }}
     >
       {children}
     </UserContext.Provider>

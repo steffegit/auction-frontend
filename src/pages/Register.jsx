@@ -1,24 +1,42 @@
 import React from 'react'
+import { useContext } from 'react'
+import { UserContext } from '../components/Context/UserContext'
+import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 function Register() {
+  const { createRegisterUser } = useContext(UserContext)
+  const { register, handleSubmit } = useForm()
+  const navigate = useNavigate()
+
   return (
     <div className="flex flex-col p-5 py-20 max-w-7xl mx-auto rounded-sm">
       <div className="text-3xl font-bold self-center mb-10">Register</div>
-      <form className="flex flex-col space-y-14 max-w-xl mx-auto">
+      <form
+        className="flex flex-col space-y-14 max-w-xl mx-auto"
+        onSubmit={handleSubmit((data) => {
+          createRegisterUser(data)
+          alert('You have registered. Go to login.')
+          navigate('/')
+        })}
+      >
         <div className="space-y-4">
           <input
-            type="email"
-            placeholder="mail@mail.com"
+            {...register('name')}
+            type="text"
+            placeholder="Name"
             className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500"
           />
           <input
+            {...register('email')}
+            type="email"
+            placeholder="Type your email here..."
+            className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500"
+          />
+          <input
+            {...register('password')}
             type="password"
             placeholder="Password"
-            className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500"
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
             className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500"
           />
         </div>
