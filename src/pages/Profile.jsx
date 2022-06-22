@@ -1,18 +1,19 @@
 import React, { useContext } from 'react'
+import { useEffect } from 'react'
 import { UserContext } from '../components/Context/UserContext'
 
 function Profile() {
-  const { guest, guestInfo, logout } = useContext(UserContext)
+  const { guest, userInfo, logout } = useContext(UserContext)
 
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-start sm:items-start space-y-8 sm:space-y-0 max-w-7xl sm:mx-auto p-5 sm:space-x-10 bg-bgColor m-5 sm:m-10 rounded-md">
       <div id="#leftside" className="relative w-1/2 sm:w-1/3 overflow-visible">
         <img
-          src={guestInfo?.picture}
+          src={userInfo?.picture}
           alt="avatar"
           className="aspect-square object-cover rounded-full sm:rounded-md"
         />
-        {guestInfo?.verified ? (
+        {userInfo?.verified ? (
           <div className="absolute top-0 right-0 font-bold p-2 bg-green-400 rounded-full text-xs text-green-900 uppercase sm:rounded-none sm:rounded-r-md">
             VERIFIED
           </div>
@@ -24,21 +25,21 @@ function Profile() {
       >
         <div className="flex items-end space-x-2">
           <div className="font-bold text-3xl">{guest ? 'Guest' : null}</div>
-          <div className="text-lg italic">({guestInfo?.username})</div>
+          <div className="text-lg italic">({userInfo?.username})</div>
         </div>
         <div>
-          Location - <strong>{guestInfo?.location}</strong>
+          Location - <strong>{userInfo?.location}</strong>
         </div>
 
-        <div>{guestInfo?.email}</div>
+        <div>{userInfo?.email}</div>
         {/* IF BIDS/SELLS == 0 SHOW NO CURRENT */}
-        {guestInfo?.bids.length !== 0 ? (
-          <a href="#active">{guestInfo?.bids} active bids</a>
+        {userInfo?.bids.length !== 0 ? (
+          <a href="#active">{userInfo?.bids} active bids</a>
         ) : (
           <div>No active bids</div>
         )}
-        {guestInfo?.sells.length !== 0 ? (
-          <a href="#sold">{guestInfo?.sells} sold vehicles</a>
+        {userInfo?.sells.length !== 0 ? (
+          <a href="#sold">{userInfo?.sells} sold vehicles</a>
         ) : (
           <div>Not selling anything</div>
         )}

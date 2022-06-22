@@ -65,7 +65,6 @@ export const UserContextProvider = ({ children }) => {
   const [guest, setGuest] = useState(
     JSON.parse(localStorage.getItem('guest')) === true
   )
-  const [guestInfo, setGuestInfo] = useState(undefined)
   const [userInfo, setUserInfo] = useState(undefined)
   const [loggedIn, setLoggedIn] = useState(
     JSON.parse(localStorage.getItem('loggedIn')) === true
@@ -78,10 +77,10 @@ export const UserContextProvider = ({ children }) => {
 
   const logProfile = async (info) => {
     const data = await loginUser(info.email, info.password)
-    setUserInfo(data)
     localStorage.setItem('loggedIn', true)
     setLoggedIn(true)
-    console.log(data)
+    setToken(data['token'])
+    localStorage.setItem('token', data['token'])
   }
 
   useEffect(() => {
@@ -91,8 +90,7 @@ export const UserContextProvider = ({ children }) => {
       const fetchData = async () => {
         const data = await fetchUserByToken(token)
 
-        setGuestInfo(data)
-        console.log(data)
+        setUserInfo(data)
       }
       if (guest) {
         fetchData().catch(console.error)
@@ -101,7 +99,7 @@ export const UserContextProvider = ({ children }) => {
       const fetchData = async () => {
         const data = await fetchUsers()
 
-        setGuestInfo(data['guest'])
+        setUserInfo(data['guest'])
         setToken(data['token'])
         localStorage.setItem('token', data['token'])
       }
@@ -111,9 +109,21 @@ export const UserContextProvider = ({ children }) => {
     }
   }, [guest, token])
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchUserByToken(token)
+      setUserInfo(data)
+    }
+    if (loggedIn && !guest) {
+      fetchData().catch(console.error)
+    }
+  }, [token])
+
   const activateGuest = () => {
     localStorage.setItem('guest', true)
+    localStorage.setItem('loggedIn', true)
     setGuest(true)
+    setLoggedIn(true)
   }
 
   const logout = () => {
@@ -131,7 +141,6 @@ export const UserContextProvider = ({ children }) => {
         logout,
         userInfo,
         loggedIn,
-        guestInfo,
         createRegisterUser,
         logProfile,
       }}

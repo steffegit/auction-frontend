@@ -42,7 +42,7 @@ function App() {
               path="/bid/:id"
               element={
                 <ProtectedUserRoute
-                  user={JSON.parse(localStorage.getItem('guest'))}
+                  user={JSON.parse(localStorage.getItem('loggedIn'))}
                 >
                   <BidForm />
                 </ProtectedUserRoute>
@@ -53,7 +53,7 @@ function App() {
               path="/login"
               element={
                 <ProtectedRoute
-                  user={JSON.parse(localStorage.getItem('guest'))}
+                  user={JSON.parse(localStorage.getItem('loggedIn'))}
                 >
                   <Login />
                 </ProtectedRoute>
@@ -63,7 +63,7 @@ function App() {
               path="/register"
               element={
                 <ProtectedRoute
-                  user={JSON.parse(localStorage.getItem('guest'))}
+                  user={JSON.parse(localStorage.getItem('loggedIn'))}
                 >
                   <Register />
                 </ProtectedRoute>
@@ -73,7 +73,7 @@ function App() {
               path="/profile"
               element={
                 <ProtectedUserRoute
-                  user={JSON.parse(localStorage.getItem('guest'))}
+                  user={JSON.parse(localStorage.getItem('loggedIn'))}
                 >
                   <Profile />
                 </ProtectedUserRoute>
