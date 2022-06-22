@@ -23,10 +23,7 @@ function Profile() {
         id="#rightside"
         className="w-full h-full flex flex-col justify-center items-center sm:justify-start sm:items-start text-center sm:text-left"
       >
-        <div className="flex items-end space-x-2">
-          <div className="font-bold text-3xl">{guest ? 'Guest' : null}</div>
-          <div className="text-lg italic">({userInfo?.username})</div>
-        </div>
+        <div className="text-4xl font-bold">{userInfo?.username}</div>
         <div>
           Location - <strong>{userInfo?.location}</strong>
         </div>
