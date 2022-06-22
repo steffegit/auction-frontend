@@ -6,6 +6,7 @@ export const UserContext = createContext({})
 
 const usersUrl = 'https://auction-website89.herokuapp.com/users'
 const registerUrl = 'https://auction-website89.herokuapp.com/users/register'
+const loginUrl = 'https://auction-website89.herokuapp.com/users/login'
 
 const fetchUsers = async () => {
   try {
@@ -44,16 +45,42 @@ const registerUser = async (name, email, password) => {
   }
 }
 
+const loginUser = async (email, password) => {
+  try {
+    let postData = {
+      email: email,
+      password: password,
+    }
+    const res = await axios.post(loginUrl, qs.stringify(postData), {
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    })
+    return res.data
+  } catch (error) {
+    console.log(error)
+    return null
+  }
+}
+
 export const UserContextProvider = ({ children }) => {
   const [guest, setGuest] = useState(
     JSON.parse(localStorage.getItem('guest')) === true
   )
-  const [users, setUsers] = useState({})
   const [guestInfo, setGuestInfo] = useState(undefined)
+  const [userInfo, setUserInfo] = useState(undefined)
+  const [loggedIn, setLoggedIn] = useState(
+    JSON.parse(localStorage.getItem('loggedIn')) === true
+  )
   const [token, setToken] = useState(localStorage.getItem('token'))
 
   const createRegisterUser = async (info) => {
-    const data = await registerUser(info.name, info.email, info.password)
+    await registerUser(info.name, info.email, info.password)
+  }
+
+  const logProfile = async (info) => {
+    const data = await loginUser(info.email, info.password)
+    setUserInfo(data)
+    localStorage.setItem('loggedIn', true)
+    setLoggedIn(true)
     console.log(data)
   }
 
@@ -64,7 +91,6 @@ export const UserContextProvider = ({ children }) => {
       const fetchData = async () => {
         const data = await fetchUserByToken(token)
 
-        setUsers(data)
         setGuestInfo(data)
         console.log(data)
       }
@@ -75,7 +101,6 @@ export const UserContextProvider = ({ children }) => {
       const fetchData = async () => {
         const data = await fetchUsers()
 
-        setUsers(data)
         setGuestInfo(data['guest'])
         setToken(data['token'])
         localStorage.setItem('token', data['token'])
@@ -93,6 +118,8 @@ export const UserContextProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.setItem('guest', false)
+    localStorage.setItem('loggedIn', false)
+    setLoggedIn(false)
     setGuest(false)
   }
 
@@ -102,9 +129,11 @@ export const UserContextProvider = ({ children }) => {
         guest,
         activateGuest,
         logout,
-        users,
+        userInfo,
+        loggedIn,
         guestInfo,
         createRegisterUser,
+        logProfile,
       }}
     >
       {children}

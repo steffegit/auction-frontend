@@ -9,14 +9,14 @@ import { UserContext } from './Context/UserContext'
 function TopBar() {
   const navigate = useNavigate()
 
-  const { guest, logout, users } = useContext(UserContext)
+  const { guest, loggedIn } = useContext(UserContext)
 
   const { allCars } = useContext(SiteContext)
 
   const [showHambuger, setShowHambuger] = useState(false)
 
   useEffect(() => {
-    console.log(users)
+    console.log(loggedIn)
   })
 
   return (
@@ -67,7 +67,7 @@ function TopBar() {
             </button>
           </div>
           <div>
-            {!guest ? (
+            {!guest && !loggedIn ? (
               <button
                 type="button"
                 className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 pl-0 sm:pl-4 rounded-md bg-secondary text-white hover:bg-blue-500 transition-all"
@@ -97,7 +97,7 @@ function TopBar() {
                 href={'/profile'}
               >
                 <div className="hidden sm:block text-xl font-semibold">
-                  Guest
+                  {guest ? 'Guest' : 'Profile'}
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

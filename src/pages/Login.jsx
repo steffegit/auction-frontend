@@ -1,24 +1,34 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
 import { UserContext } from '../components/Context/UserContext'
 
 function Login() {
-  const { activateGuest } = useContext(UserContext)
+  const { activateGuest, logProfile } = useContext(UserContext)
+  const { register, handleSubmit } = useForm()
 
   const navigate = useNavigate()
 
   return (
     <div className="flex flex-col p-5 py-20 max-w-7xl mx-auto rounded-sm">
       <div className="text-3xl font-bold self-center mb-10">Login</div>
-      <form className="flex flex-col space-y-14 max-w-xl mx-auto">
+      <form
+        className="flex flex-col space-y-14 max-w-xl mx-auto"
+        onSubmit={handleSubmit((data) => {
+          logProfile(data)
+          navigate('/', { replace: true })
+        })}
+      >
         <div className="space-y-4">
           <input
+            {...register('email')}
             type="email"
             placeholder="mail@mail.com"
             className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500"
           />
           <input
+            {...register('password')}
             type="password"
             placeholder="Password"
             className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500"
