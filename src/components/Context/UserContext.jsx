@@ -69,7 +69,10 @@ export const UserContextProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(
     JSON.parse(localStorage.getItem('loggedIn')) === true
   )
-  const [token, setToken] = useState(localStorage.getItem('token'))
+  const [guestToken, setGuestToken] = useState(
+    localStorage.getItem('guestToken')
+  )
+  const [userToken, setUserToken] = useState(localStorage.getItem('userToken'))
 
   const createRegisterUser = async (info) => {
     await registerUser(info.name, info.email, info.password)
@@ -79,16 +82,16 @@ export const UserContextProvider = ({ children }) => {
     const data = await loginUser(info.email, info.password)
     localStorage.setItem('loggedIn', true)
     setLoggedIn(true)
-    setToken(data['token'])
-    localStorage.setItem('token', data['token'])
+    setUserToken(data['token'])
+    localStorage.setItem('userToken', data['token'])
   }
 
   useEffect(() => {
     localStorage.setItem('guest', guest)
 
-    if (token !== null) {
+    if (guestToken !== null) {
       const fetchData = async () => {
-        const data = await fetchUserByToken(token)
+        const data = await fetchUserByToken(guestToken)
 
         setUserInfo(data)
       }
@@ -100,24 +103,24 @@ export const UserContextProvider = ({ children }) => {
         const data = await fetchUsers()
 
         setUserInfo(data['guest'])
-        setToken(data['token'])
-        localStorage.setItem('token', data['token'])
+        setGuestToken(data['token'])
+        localStorage.setItem('guestToken', data['token'])
       }
       if (guest) {
         fetchData().catch(console.error)
       }
     }
-  }, [guest, token])
+  }, [guestToken])
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchUserByToken(token)
+      const data = await fetchUserByToken(userToken)
       setUserInfo(data)
     }
     if (loggedIn && !guest) {
       fetchData().catch(console.error)
     }
-  }, [token])
+  }, [userToken])
 
   const activateGuest = () => {
     localStorage.setItem('guest', true)

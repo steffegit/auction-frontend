@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
-import { useEffect } from 'react'
 import { UserContext } from '../components/Context/UserContext'
 
 function Profile() {
-  const { guest, userInfo, logout } = useContext(UserContext)
+  const { userInfo, logout } = useContext(UserContext)
 
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-start sm:items-start space-y-8 sm:space-y-0 max-w-7xl sm:mx-auto p-5 sm:space-x-10 bg-bgColor m-5 sm:m-10 rounded-md">
