@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 
 import BidAmount from '../components/Form/FormPages/BidAmount'
@@ -8,23 +8,25 @@ import PickUp from '../components/Form/FormPages/PickUp'
 import Success from '../components/Form/FormPages/Success'
 
 import FormSteps from '../components/Form/FormSteps'
+import { SiteContext } from '../components/Context/Context'
 
 const steps = ['Pick Up', 'Financing', 'Bid Amount', 'Deposit Fee', 'Success']
 
 function BidForm() {
   let { id } = useParams()
   const [page, setPage] = useState(0)
+  const { getBidData, bid } = useContext(SiteContext)
+
+  useEffect(() => {
+    getBidData(id)
+  }, [])
 
   const [formData, setFormData] = useState({
     pickUp: false,
     financing: false,
-    bidAmount: 0,
+    bidAmount: bid?.cost,
     depositFee: false,
   })
-
-  // useEffect(() => {
-  //   console.log(formData)
-  // }, [formData])
 
   const PageDisplay = () => {
     switch (page) {
@@ -33,7 +35,13 @@ function BidForm() {
       case 1:
         return <Financing formData={formData} setFormData={setFormData} />
       case 2:
-        return <BidAmount formData={formData} setFormData={setFormData} />
+        return (
+          <BidAmount
+            formData={formData}
+            setFormData={setFormData}
+            bidData={bid}
+          />
+        )
       case 3:
         return <Deposit formData={formData} setFormData={setFormData} />
       case 4:
