@@ -11,7 +11,7 @@ function Post() {
         <div className="space-y-4 w-full">
           <div>
             <label htmlFor="title" aria-required>
-              Title*
+              Title
               <input
                 type="text"
                 placeholder="ex: BMW M3"
@@ -23,9 +23,8 @@ function Post() {
           <div className="flex space-x-4">
             <div className="flex flex-col w-2/4">
               <label htmlFor="category" aria-required>
-                Category/Brand*
+                Category/Brand
               </label>
-              {/* MAYBE USE SOMETHING ELSE HERE */}
               <select
                 id="category"
                 name="category"
@@ -39,7 +38,7 @@ function Post() {
               </select>
             </div>
             <div className="w-2/4">
-              <label htmlFor="year">Make Year*</label>
+              <label htmlFor="year">Make Year</label>
               <input
                 type="number"
                 min={0}
@@ -49,11 +48,34 @@ function Post() {
               />
             </div>
           </div>
+          <div className="flex space-x-4">
+            <div className="flex flex-col w-2/4">
+              <label htmlFor="location" aria-required>
+                Location
+              </label>
+              <input
+                type="text"
+                name="location"
+                placeholder="ex: San Francisco"
+                className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
+              />
+            </div>
+            <div className="w-2/4">
+              <label htmlFor="mileage">Mileage</label>
+              <input
+                type="number"
+                min={0}
+                name="mileage"
+                placeholder="ex: 20000km"
+                className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
+              />
+            </div>
+          </div>
           <div>
             <label htmlFor="description" aria-required>
-              Description*
+              Description
               <textarea
-                placeholder="Description"
+                placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit."
                 name="description"
                 className="w-full min-h-[100px] p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
               />
