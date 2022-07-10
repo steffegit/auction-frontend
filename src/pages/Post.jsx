@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { SiteContext } from '../components/Context/Context'
+import { useNavigate } from 'react-router'
+import { useForm } from 'react-hook-form'
 
 const predefinedImages = [
   {
@@ -23,8 +25,31 @@ function Post() {
   const [showModal, setShowModal] = useState(false)
   const [imgUrls, setImgUrls] = useState([])
 
+  const [postData, setPostData] = useState({
+    title: '',
+    brand: 'Audi', //by default
+    year: 0,
+    location: '',
+    km: 0,
+    cost: 0,
+    price: '',
+    hrs: null,
+    pic: '',
+    pic1: '',
+    pic2: '',
+    type: 'heavy',
+    classic: false,
+    sold: false,
+    promoted: true,
+    currentHighestBidder: 1234,
+  })
+
   const activateModal = () => setShowModal(true)
   const hideModal = () => setShowModal(false)
+
+  const { createAuctionPost } = useContext(SiteContext)
+  const { handleSubmit } = useForm()
+  const navigate = useNavigate()
 
   useEffect(() => {
     console.log(imgUrls)
@@ -33,7 +58,14 @@ function Post() {
   return (
     <div className="max-w-3xl mx-auto p-3 py-20 flex flex-col items-center justify-start sm:p-12 sm:py-20 rounded-md bg-white">
       <div className="text-3xl font-bold mb-10">Post a Bid</div>
-      <form className="flex flex-col space-y-14 w-full">
+      <form
+        className="flex flex-col space-y-14 w-full"
+        onSubmit={handleSubmit(() => {
+          createAuctionPost(postData)
+          alert('You have made a new post. Hurray!')
+          navigate('/')
+        })}
+      >
         <div className="space-y-4 w-full">
           <div>
             <label htmlFor="title" aria-required>
@@ -42,6 +74,9 @@ function Post() {
                 type="text"
                 placeholder="ex: BMW M3"
                 name="title"
+                onChange={(event) =>
+                  setPostData({ ...postData, title: event.target.value })
+                }
                 className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
               />
             </label>
@@ -54,6 +89,9 @@ function Post() {
               <select
                 id="category"
                 name="category"
+                onChange={(event) =>
+                  setPostData({ ...postData, brand: event.target.value })
+                }
                 className="p-3 rounded-md border bg-white border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
               >
                 {brands?.map((item, idx) => (
@@ -70,6 +108,9 @@ function Post() {
                 min={0}
                 name="year"
                 placeholder="ex: 2020"
+                onChange={(event) =>
+                  setPostData({ ...postData, year: event.target.value })
+                }
                 className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
               />
             </div>
@@ -83,6 +124,9 @@ function Post() {
                 type="text"
                 name="location"
                 placeholder="ex: San Francisco"
+                onChange={(event) =>
+                  setPostData({ ...postData, location: event.target.value })
+                }
                 className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
               />
             </div>
@@ -93,9 +137,25 @@ function Post() {
                 min={0}
                 name="mileage"
                 placeholder="ex: 20000km"
+                onChange={(event) =>
+                  setPostData({ ...postData, km: event.target.value })
+                }
                 className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
               />
             </div>
+          </div>
+          <div className="w-full">
+            <label htmlFor="price">Price</label>
+            <input
+              type="number"
+              min={0}
+              name="price"
+              placeholder="ex: 10.000$"
+              onChange={(event) =>
+                setPostData({ ...postData, cost: event.target.value })
+              }
+              className="w-full p-3 rounded-md border border-slate-400 focus:outline-none focus:border-slate-500 mt-1"
+            />
           </div>
           <div>
             <label htmlFor="description" aria-required>
@@ -158,7 +218,7 @@ function Post() {
           </div>
         ) : null}
         <div className="text-xl font-medium">
-          You have uploaded {imgUrls.length} images.
+          You have selected {imgUrls.length} images.
         </div>
         <button
           type="submit"

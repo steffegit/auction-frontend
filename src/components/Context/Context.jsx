@@ -1,7 +1,10 @@
 import axios from 'axios'
 import React, { useState, createContext, useEffect } from 'react'
+import qs from 'qs'
 
 export const SiteContext = createContext({})
+
+const createAuctionUrl = 'https://auction-website89.herokuapp.com/bids'
 
 const fetchAPI = async () => {
   try {
@@ -18,6 +21,20 @@ const fetchBidAPI = async (id) => {
     const res = await axios.get(
       `https://auction-website89.herokuapp.com/bids/${id}`
     )
+    return res.data
+  } catch (error) {
+    console.log(error)
+    return null
+  }
+}
+
+const createAuction = async (postData) => {
+  try {
+    console.log(qs.stringify(postData))
+    const res = await axios.post(createAuctionUrl, qs.stringify(postData), {
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    })
+    console.log(res)
     return res.data
   } catch (error) {
     console.log(error)
@@ -47,6 +64,10 @@ export const SiteContextProvider = ({ children }) => {
     getCars().catch(console.error)
   }, [])
 
+  const createAuctionPost = async (postData) => {
+    await createAuction(postData)
+  }
+
   const getBidData = async (id) => {
     await fetchBidAPI(id).then((res) => setBid(res))
   }
@@ -60,6 +81,7 @@ export const SiteContextProvider = ({ children }) => {
         currentCars,
         brands,
         getBidData,
+        createAuctionPost,
         bid,
       }}
     >
