@@ -2,9 +2,9 @@
 
 ### This project was made with the help and backend of [moedeera](https://github.com/moedeera)
 
-### <em>Project screenshots are coming soon...</em>
+<img src="https://i.imgur.com/gkXfOo1.png" alt="Screenshot"/>
+<img src="https://i.imgur.com/yoIJOoP.png" alt="Screenshot 2"/>
 
-<br>
 <br>
 
 # TODO:
